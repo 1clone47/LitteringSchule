@@ -7,7 +7,8 @@ export default {
   },
   methods: {
     triggerEasterEgg () {
-      this.enableEasterEgg = !this.enableEasterEgg
+       // this.enableEasterEgg = !this.enableEasterEgg
+      return pass
     },
     checkQuestion1 (answer) {
       if (answer === 'A') {
@@ -27,13 +28,13 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full items-center space-y-12">
+  <div class="w-full h-full bg-blue-300 items-center space-y-12">
     <div v-if="enableEasterEgg === false" class="text-center mt-4 text-5xl font-mono underline text-white" @mouseover="triggerEasterEgg">Littering</div>
     <div v-else class="text-center items-center mt-4 text-5xl font-mono underline text-white" @mouseover="triggerEasterEgg">
       <p class="text-white text-5xl underline">GOTTCHA!</p>
       <img src="https://cdn.pixabay.com/photo/2013/07/12/19/33/emperor-penguin-154991_960_720.png">
     </div>
-    <div class="flex flex-col text-center space-y-4 mx-32">
+    <div class="flex flex-col text-center space-y-4 mx-32 ">
       <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Was verstehst du unter "Littering"?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
