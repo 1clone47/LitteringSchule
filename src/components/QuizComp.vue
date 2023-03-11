@@ -23,12 +23,8 @@ export default {
       if (!this.question1Answered) {
         if (answer === 'A') {
           this.points += 1
-          alert("Richtig. Punkte:" + this.points)
-          this.question1Answered = true
-        } else {
-          alert("Falsch")
-          this.question1Answered = true
         }
+        this.question1Answered = true
       }
     },
     checkQuestion2 (answer) {
@@ -41,54 +37,43 @@ export default {
       } else {
         this.points += 0
       }
+      this.question2Answered = true
     },
     checkQuestion3 (answer) {
       if (answer === 'A') {
         this.points += 1
-        alert("Richtig. Punkte:" + this.points)
-      } else {
-        alert("Falsch")
       }
+      this.question3Answered = true
     },
     checkQuestion4 (answer) {
       if (answer === 'C') {
         this.points += 1
-        alert("Richtig. Punkte:" + this.points)
-      } else {
-        alert("Falsch")
       }
+      this.question4Answered = true
     },
     checkQuestion5 (answer) {
       if (answer === 'A') {
         this.points += 1
-        alert("Richtig. Punkte:" + this.points)
-      } else {
-        alert("Falsch")
       }
+      this.question5Answered = true
     },
     checkQuestion6 (answer) {
       if (answer === 'B') {
         this.points += 1
-        alert("Richtig. Punkte:" + this.points)
-      } else {
-        alert("Falsch")
       }
+      this.question6Answered = true
     },
     checkQuestion7 (answer) {
       if (answer === 'C') {
         this.points += 1
-        alert("Richtig. Punkte:" + this.points)
-      } else {
-        alert("Falsch")
       }
+      this.question7Answered = true
     },
     checkQuestion8 (answer) {
       if (answer === 'D') {
         this.points += 1
-        alert("Richtig. Punkte:" + this.points)
-      } else {
-        alert("Falsch")
       }
+      this.question8Answered = true
     }
   }
 }
@@ -105,23 +90,23 @@ export default {
       <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Was verstehst du unter "Littering"?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button :class="{'bg-green-600': question1Answered, 'border-green-600': question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
-          <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion1('B')">B: Einmaliges benutzen von Mehrwegprodukten</button>
+          <button :class="{'bg-green-600': question1Answered, 'border-green-600': question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
+          <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('B')">B: Einmaliges benutzen von Mehrwegprodukten</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion1('C')">C: Entsorgen von Abfällen neben Autobahnen</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
+          <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('C')">C: Entsorgen von Abfällen neben Autobahnen</button>
+          <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
         </div>
       </div>
       <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Sotierst du deinen Müll?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion2('A')">A: Ja</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion2('B')">B: Gelegentlich</button>
+          <button :class="{'bg-green-600': question2Answered, 'border-green-600': question2Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion2('A')">A: Ja</button>
+          <button :class="{'bg-yellow-600': question2Answered, 'border-yellow-600': question2Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion2('B')">B: Gelegentlich</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion2('C')">C: Vielleicht 😇</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion2('D')">D: Nein</button>
+          <button :class="{'bg-orange-600': question2Answered, 'border-orange-600': question2Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion2('C')">C: Vielleicht 😇</button>
+          <button :class="{'bg-red-600': question2Answered, 'border-red-600': question2Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion2('D')">D: Nein</button>
         </div>
       </div>
       <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
