@@ -10,5 +10,5 @@ import { RouterLink } from 'vue-router'
       <RouterLink to="/consequences" class="flex-1 hover:text-blue-900 text-center">FOLGEN</RouterLink>
       <RouterLink to="/measures" class="flex-1 hover:text-blue-900 text-center">MAßNAHMEN</RouterLink>
     </div>
-  </div>
+    </div>
 </template>

@@ -86,7 +86,7 @@ export default {
       <p class="text-white text-5xl underline">GOTTCHA!</p>
       <img src="https://cdn.pixabay.com/photo/2013/07/12/19/33/emperor-penguin-154991_960_720.png">
     </div>
-    <div class="flex flex-col text-center space-y-4 mx-32 ">
+    <div id="Frage 1" class="flex flex-col text-center space-y-4 mx-32 ">
       <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Was verstehst du unter "Littering"?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
@@ -98,7 +98,7 @@ export default {
           <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 2" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Sotierst du deinen Müll?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
           <button :class="{'bg-green-600': question2Answered, 'border-green-600': question2Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion2('A')">A: Ja</button>
@@ -109,70 +109,70 @@ export default {
           <button :class="{'bg-red-600': question2Answered, 'border-red-600': question2Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion2('D')">D: Nein</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 3" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Ist Littering legal?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion3('A')">A: Nein</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion3('B')">B: Bestimmt</button>
+          <button :class="{'bg-green-600': question3Answered, 'border-green-600': question3Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion3('A')">A: Nein</button>
+          <button :class="{'bg-red-600': question3Answered, 'border-red-600': question3Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion3('B')">B: Bestimmt</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion3('C')">C: Keine Ahnung</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion3('D')">D: Ja</button>
+          <button :class="{'bg-red-600': question3Answered, 'border-red-600': question3Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion3('C')">C: Keine Ahnung</button>
+          <button :class="{'bg-red-600': question3Answered, 'border-red-600': question3Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion3('D')">D: Ja</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 4" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Wie hoch können die Geldstrafen ausfallen?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('A')">A: 60€</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('B')">B: 200€ - 1.000€</button>
+          <button :class="{'bg-red-600': question4Answered, 'border-red-600': question4Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('A')">A: 60€</button>
+          <button :class="{'bg-red-600': question4Answered, 'border-red-600': question4Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('B')">B: 200€ - 350€</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('C')">C: 400€ - 15.000€</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('D')">D: 5€ - 10€</button>
+          <button :class="{'bg-green-600': question4Answered, 'border-green-600': question4Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('C')">C: 400€ - 15.000€</button>
+          <button :class="{'bg-red-600': question4Answered, 'border-red-600': question4Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion4('D')">D: 5€ - 10€</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 5" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Welchem Biom schadet Littering besonders?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('A')">A: Ozeane</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('B')">B: Wälder</button>
+          <button :class="{'bg-green-600': question5Answered, 'border-green-600': question5Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('A')">A: Ozeane</button>
+          <button :class="{'bg-red-600': question5Answered, 'border-red-600': question5Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('B')">B: Wälder</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('C')">C: Wüste</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('D')">D: Gletscher</button>
+          <button :class="{'bg-red-600': question5Answered, 'border-red-600': question5Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('C')">C: Wüste</button>
+          <button :class="{'bg-red-600': question5Answered, 'border-red-600': question5Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion5('D')">D: Gletscher</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 6" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Wie viel Grundwasser verschmutzt eine Zigarettenstummel?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('A')">A: 35l - 55l</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('B')">B: 40l - 60l</button>
+          <button :class="{'bg-red-600': question6Answered, 'border-red-600': question6Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('A')">A: 5l - 10l</button>
+          <button :class="{'bg-green-600': question6Answered, 'border-green-600': question6Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('B')">B: 40l - 60l</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('C')">C: 30l - 50l</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('D')">D: 42,56l - 61,91l</button>
+          <button :class="{'bg-red-600': question6Answered, 'border-red-600': question6Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('C')">C: 30l - 50l</button>
+          <button :class="{'bg-red-600': question6Answered, 'border-red-600': question6Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion6('D')">D: 42,56l - 61,91l</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 7" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Welche deutsche Stadt ist am meisten vom Littering betroffen?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('A')">A: München</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('B')">B: Berlin</button>
+          <button :class="{'bg-red-600': question7Answered, 'border-red-600': question7Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('A')">A: München</button>
+          <button :class="{'bg-red-600': question7Answered, 'border-red-600': question7Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('B')">B: Berlin</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('C')">C: Baden-Baden</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('D')">D: Friesland</button>
+          <button :class="{'bg-green-600': question7Answered, 'border-green-600': question7Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('C')">C: Baden-Baden</button>
+          <button :class="{'bg-red-600': question7Answered, 'border-red-600': question7Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion7('D')">D: Friesland</button>
         </div>
       </div>
-      <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+      <div id="Frage 8" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
         <p class="text-xl">Wie lange braucht eine Plastikflasche bis es zerfällt?</p>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('A')">A: ~60 Jahre</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('B')">B: ~100 Jahre</button>
+          <button :class="{'bg-red-600': question8Answered, 'border-red-600': question8Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('A')">A: ~60 Jahre</button>
+          <button :class="{'bg-red-600': question8Answered, 'border-red-600': question8Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('B')">B: ~100 Jahre</button>
         </div>
         <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('C')">C: ~250 Jahre</button>
-          <button class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('D')">D: ~400 Jahre</button>
+          <button :class="{'bg-red-600': question8Answered, 'border-red-600': question8Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('C')">C: ~250 Jahre</button>
+          <button :class="{'bg-green-600': question8Answered, 'border-green-600': question8Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center hover:bg-gray-300" @click="checkQuestion8('D')">D: ~400 Jahre</button>
         </div>
       </div>
     </div>
