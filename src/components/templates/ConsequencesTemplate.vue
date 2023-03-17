@@ -16,8 +16,8 @@
       </div>
       <div class="flex flex-row w-full space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
-          <p>
-            Umweltverschmutzung:
+          <p class="font-bold text-lg underline">
+            Umweltverschmutzung
           </p>
           <p>
             Verschmutzung von Boden, Wasser und Luft und Verschlimmerung des Klimakrise.
@@ -29,7 +29,9 @@
       </div>
       <div class="flex flex-row space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
-          <p>Schädigung der Tierwelt</p>
+          <p class="font-bold text-lg underline">
+            Schädigung der Tierwelt
+          </p>
           <p>Tiere können durch Littering (z.B. Plastiktüten, Flaschen) geschädigt werden, indem sie den Müll fressen oder sich darin verfangen. </p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
@@ -38,7 +40,9 @@
       </div>
       <div class="flex flex-row w-full space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
-          <p>Gesundheitsrisiken</p>
+          <p class="font-bold text-lg underline">
+            Gesundheitsrisiken
+          </p>
           <p>Abfall und Müll können eine Vielzahl von Krankheiten und Infektionen verursachen, da sie Bakterien, Viren und andere schädliche Substanzen enthalten können.</p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
@@ -47,7 +51,9 @@
       </div>
       <div class="flex flex-row space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
-          <p>Ästhetische Beeinträchtigung</p>
+          <p class="font-bold text-lg underline">
+            Ästhetische Beeinträchtigung
+          </p>
           <p>Littering kann die Schönheit von öffentlichen Plätzen beeinträchtigen und zu einer unansehnlichen und unattraktiven Umgebung führen.</p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
@@ -56,7 +62,9 @@
       </div>
       <div class="flex flex-row space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
-          <p class="align-text-top">Wirtschaftliche Kosten</p>
+          <p class="font-bold text-lg underline">
+            Wirtschaftliche Kosten
+          </p>
           <p>Die Beseitigung von Littering kann sehr teuer sein und Steuergelder in Anspruch nehmen, die für andere Zwecke verwendet werden könnten. </p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
@@ -65,7 +73,9 @@
       </div>
       <div class="flex flex-row space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
-          <p>Reputationsverlust</p>
+          <p class="font-bold text-lg underline">
+            Reputationsverlust
+          </p>
           <p>Littering kann das Ansehen einer Stadt oder Region negativ beeinflussen, was sich auf den Tourismus und die lokale Wirtschaft auswirken kann.</p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
