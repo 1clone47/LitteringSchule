@@ -10,4 +10,5 @@ import { RouterView } from 'vue-router'
   <div class="mt-4">
     <FooterBar />
   </div>
+
 </template>
