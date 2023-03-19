@@ -11,11 +11,11 @@
           </svg>
         </div>
         <div class="text-left">
-          <p>Littering führt dazu, dass Abfälle und Müll auf Straßen, Parks, Stränden und anderen öffentlichen Orten liegen bleiben.</p>
+          <p class="text-3xl">Littering führt dazu, dass Abfälle und Müll auf Straßen, Parks, Stränden und anderen öffentlichen Orten liegen bleiben.</p>
         </div>
       </div>
       <div class="flex flex-row w-full space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md text-lg">
           <p class="font-bold text-lg underline">
             Umweltverschmutzung
           </p>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md text-lg">
           <p class="font-bold text-lg underline">
             Schädigung der Tierwelt
           </p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="flex flex-row w-full space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md text-lg">
           <p class="font-bold text-lg underline">
             Gesundheitsrisiken
           </p>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md text-lg">
           <p class="font-bold text-lg underline">
             Ästhetische Beeinträchtigung
           </p>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md text-lg">
           <p class="font-bold text-lg underline">
             Wirtschaftliche Kosten
           </p>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md text-lg">
           <p class="font-bold text-lg underline">
             Reputationsverlust
           </p>
@@ -88,7 +88,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
           </svg>
         </div>
-        <div class="text-left">
+        <div class="text-left text-3xl">
           <p>Insgesamt können die Folgen von Littering erheblich sein und sowohl die Umwelt als auch die Gesellschaft in vielfältiger Weise beeinträchtigen.</p>
         </div>
       </div>
