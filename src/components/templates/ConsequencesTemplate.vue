@@ -14,7 +14,7 @@
           <p class="xl:text-3xl xs:text-sm">Littering führt dazu, dass Abfälle und Müll auf Straßen, Parks, Stränden und anderen öffentlichen Orten liegen bleiben.</p>
         </div>
       </div>
-      <div class="flex flex-row w-full space-x-4">
+      <div class="flex flex-row w-auto h-auto space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-sm">
           <p class="font-bold xl:text-3xl underline">
             Umweltverschmutzung
@@ -27,7 +27,7 @@
           <img src="https://cdn.pixabay.com/photo/2021/06/04/06/11/beach-6308884_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row space-x-4">
+      <div class="flex flex-row w-auto h-auto space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Schädigung der Tierwelt
@@ -38,7 +38,7 @@
           <img class="flex-1 h-full" src="https://cdn.pixabay.com/photo/2020/05/31/18/40/fish-5243741_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row w-full space-x-4">
+      <div class="flex flex-row w-auto h-auto space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Gesundheitsrisiken
@@ -49,7 +49,7 @@
           <img class="h-full" src="https://cdn.pixabay.com/photo/2016/11/14/03/05/surgery-1822458_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row space-x-4">
+      <div class="flex flex-row w-auto h-auto space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Ästhetische Beeinträchtigung
@@ -60,7 +60,7 @@
           <img class="h-full" src="https://cdn.pixabay.com/photo/2020/03/03/02/26/trash-4897356_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row space-x-4">
+      <div class="flex flex-row w-auto h-auto space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Wirtschaftliche Kosten
@@ -71,8 +71,8 @@
           <img class="h-full" src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-lg xs:text-sm">
+      <div class="flex flex-row w-auto h-auto space-x-4">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-lg xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Reputationsverlust
           </p>
