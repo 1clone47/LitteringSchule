@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-lg xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Reputationsverlust
           </p>
