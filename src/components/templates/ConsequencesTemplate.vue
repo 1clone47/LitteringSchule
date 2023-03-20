@@ -14,7 +14,7 @@
           <p class="xl:text-3xl xs:text-sm">Littering führt dazu, dass Abfälle und Müll auf Straßen, Parks, Stränden und anderen öffentlichen Orten liegen bleiben.</p>
         </div>
       </div>
-      <div class="flex flex-row w-auto h-auto space-x-4">
+      <div class="flex flex-row w-auto h-auto xs:h-full space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-sm">
           <p class="font-bold xl:text-3xl underline">
             Umweltverschmutzung
@@ -27,7 +27,7 @@
           <img src="https://cdn.pixabay.com/photo/2021/06/04/06/11/beach-6308884_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row w-auto h-auto space-x-4">
+      <div class="flex flex-row w-auto h-auto xs:h-full space-x-4">
         <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Schädigung der Tierwelt
