@@ -35,7 +35,7 @@
           <p>Tiere können durch Littering (z.B. Plastiktüten, Flaschen) geschädigt werden, indem sie den Müll fressen oder sich darin verfangen. </p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img class="flex-1 h-full" src="https://cdn.pixabay.com/photo/2020/05/31/18/40/fish-5243741_1280.jpg" alt="">
+          <img src="https://cdn.pixabay.com/photo/2020/05/31/18/40/fish-5243741_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -46,7 +46,7 @@
           <p>Abfall und Müll können eine Vielzahl von Krankheiten und Infektionen verursachen, da sie Bakterien, Viren und andere schädliche Substanzen enthalten können.</p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img class="h-full" src="https://cdn.pixabay.com/photo/2016/11/14/03/05/surgery-1822458_1280.jpg" alt="">
+          <img src="https://cdn.pixabay.com/photo/2016/11/14/03/05/surgery-1822458_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -57,7 +57,7 @@
           <p>Littering kann die Schönheit von öffentlichen Plätzen beeinträchtigen und zu einer unansehnlichen und unattraktiven Umgebung führen.</p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img class="h-full" src="https://cdn.pixabay.com/photo/2020/03/03/02/26/trash-4897356_1280.jpg" alt="">
+          <img src="https://cdn.pixabay.com/photo/2020/03/03/02/26/trash-4897356_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -68,7 +68,7 @@
           <p>Die Beseitigung von Littering kann sehr teuer sein und Steuergelder in Anspruch nehmen, die für andere Zwecke verwendet werden könnten. </p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img class="h-full" src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="">
+          <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -79,7 +79,7 @@
           <p>Littering kann das Ansehen einer Stadt oder Region negativ beeinflussen, was sich auf den Tourismus und die lokale Wirtschaft auswirken kann.</p>
         </div>
         <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img class="h-full" src="https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg" alt="">
+          <img src="https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row space-x-4 border-4 rounded-md border-white bg-white items-center justify-center text-center">
