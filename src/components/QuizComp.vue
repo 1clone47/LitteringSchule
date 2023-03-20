@@ -160,7 +160,7 @@ export default {
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else>
-      <div class="flex flex-col text-center space-y-4 mx-auto xl:mx-32 h-auto w-auto xxs:scroll-px-px">
+      <div class="flex flex-col text-center space-y-4 mx-auto xs:mx-2 xl:mx-32 h-auto w-auto xxs:scroll-px-px">
         <div id="Frage 1" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl xs:text-lg">Was verstehst du unter "Littering"?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
