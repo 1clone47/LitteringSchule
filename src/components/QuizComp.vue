@@ -137,7 +137,7 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full bg-blue-300 items-center space-y-12">
+  <div class="w-auto h-auto bg-blue-300 items-center space-y-12">
     <div v-if="enableEasterEgg === false" class="text-center mt-4 text-5xl font-mono underline text-white" @mouseover="triggerEasterEgg">Littering</div>
     <div v-else-if="showResult" class="flex flex-row mt-4 font-mono text-center items-center justify-center border-4 border-white mx-32 rounded-md bg-white space-x-8 text-3xl py-2 px-2">
       <div>
@@ -160,14 +160,14 @@ export default {
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else>
-      <div id="Frage 1" class="flex flex-col text-center space-y-4 mx-32 ">
-        <div class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
-          <p class="text-xl">Was verstehst du unter "Littering"?</p>
-          <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
+      <div class="flex flex-col text-center space-y-4 mx-auto h-auto">
+        <div id="Frage 1" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+          <p class="text-xl xs:text-lg">Was verstehst du unter "Littering"?</p>
+          <div class="flex flex-row space-x-4 ml-4 mr-4 h-auto xs:text-sm">
             <button :class="{'bg-green-600': question1Answered, 'border-green-600': question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
             <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('B')">B: Einmaliges benutzen von Mehrwegprodukten</button>
           </div>
-          <div class="flex flex-row space-x-4 ml-4 mr-4 h-10">
+          <div class="flex flex-row space-x-4 ml-4 mr-4 h-auto xs:text-sm">
             <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('C')">C: Entsorgen von Abfällen neben Autobahnen</button>
             <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
           </div>
