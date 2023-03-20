@@ -15,8 +15,8 @@
         </div>
       </div>
       <div class="flex flex-row w-full space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-lg xs:text-sm">
-          <p class="font-bold xl:text-lg underline">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-sm">
+          <p class="font-bold xl:text-3xl underline">
             Umweltverschmutzung
           </p>
           <p>
@@ -28,8 +28,8 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-lg">
-          <p class="font-bold xl:text-lg underline">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+          <p class="font-bold xl:text-3xl underline">
             Schädigung der Tierwelt
           </p>
           <p>Tiere können durch Littering (z.B. Plastiktüten, Flaschen) geschädigt werden, indem sie den Müll fressen oder sich darin verfangen. </p>
@@ -39,8 +39,8 @@
         </div>
       </div>
       <div class="flex flex-row w-full space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-lg">
-          <p class="font-bold xl:text-lg underline">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+          <p class="font-bold xl:text-3xl underline">
             Gesundheitsrisiken
           </p>
           <p>Abfall und Müll können eine Vielzahl von Krankheiten und Infektionen verursachen, da sie Bakterien, Viren und andere schädliche Substanzen enthalten können.</p>
@@ -50,8 +50,8 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-lg">
-          <p class="font-bold xl:text-lg underline">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+          <p class="font-bold xl:text-3xl underline">
             Ästhetische Beeinträchtigung
           </p>
           <p>Littering kann die Schönheit von öffentlichen Plätzen beeinträchtigen und zu einer unansehnlichen und unattraktiven Umgebung führen.</p>
@@ -61,8 +61,8 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-lg">
-          <p class="font-bold xl:text-lg underline">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+          <p class="font-bold xl:text-3xl underline">
             Wirtschaftliche Kosten
           </p>
           <p>Die Beseitigung von Littering kann sehr teuer sein und Steuergelder in Anspruch nehmen, die für andere Zwecke verwendet werden könnten. </p>
@@ -72,8 +72,8 @@
         </div>
       </div>
       <div class="flex flex-row space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-lg xs:text-sm">
-          <p class="font-bold xl:text-lg underline">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-lg xs:text-2xl">
+          <p class="font-bold xl:text-3xl underline">
             Reputationsverlust
           </p>
           <p>Littering kann das Ansehen einer Stadt oder Region negativ beeinflussen, was sich auf den Tourismus und die lokale Wirtschaft auswirken kann.</p>
