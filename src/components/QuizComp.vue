@@ -160,14 +160,14 @@ export default {
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else>
-      <div class="flex flex-col text-center space-y-4 mx-auto h-auto w-auto xxs:scroll-px-px">
+      <div class="flex flex-col text-center space-y-4 mx-auto xs:mx-2 xl:mx-32 h-auto w-auto xxs:scroll-px-px">
         <div id="Frage 1" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl xs:text-lg">Was verstehst du unter "Littering"?</p>
-          <div class="flex flex-row space-x-4 ml-4 mr-4 md:h-16 xs:h-auto xs:text-sm">
+          <div class="flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
             <button :class="{'bg-green-600': question1Answered, 'border-green-600': question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
             <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('B')">B: Einmaliges benutzen von Mehrwegprodukten</button>
           </div>
-          <div class="flex flex-row space-x-4 ml-4 mr-4 md:h-16 xs:h-auto xs:text-sm">
+          <div class="flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
             <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('C')">C: Entsorgen von Abfällen neben Autobahnen</button>
             <button :class="{'bg-red-600':question1Answered, 'border-red-600':question1Answered}" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
           </div>
