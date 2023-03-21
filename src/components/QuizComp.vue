@@ -161,7 +161,7 @@ export default {
       <img class="rounded-md h-auto w-auto" :src="resultImage" alt="">
       <p class="flex-1 text-3xl">DU BIST EIN</p>
       <p class="text-3xl">{{ this.resultMessage }}</p>
-      <p class="w-auto mx-4"><a :href="resultImage" target="_blank">CREDIT TO: {{ this.resultImage }}</a></p>
+      <p class="w-auto mx-4 text-xs"><a :href="resultImage" target="_blank">CREDIT TO:<br /> {{ this.resultImage }}</a></p>
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else>
