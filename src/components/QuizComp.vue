@@ -158,9 +158,10 @@ export default {
       <img alt="" src="https://cdn.pixabay.com/photo/2013/07/12/19/33/emperor-penguin-154991_960_720.png">
     </div>
     <div v-if="showResult" class="w-full text-center items-center flex flex-col text-white space-y-4">
+      <img class="rounded-md h-auto w-auto" :src="resultImage" alt="">
       <p class="flex-1 text-3xl">DU BIST EIN</p>
-      <img class="rounded-md h-auto w-full" :src="resultImage" alt="">
       <p class="text-3xl">{{ this.resultMessage }}</p>
+      <p>credit to {{ this.resultImage }}</p>
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else>
