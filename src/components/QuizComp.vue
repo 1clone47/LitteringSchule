@@ -159,7 +159,7 @@ export default {
     </div>
     <div v-if="showResult" class="w-full text-center items-center flex flex-col text-white space-y-4">
       <p class="flex-1 text-3xl">DU BIST EIN</p>
-      <img class="rounded-md h-48 w-48" :src="resultImage" alt="">
+      <img class="rounded-md h-auto w-full" :src="resultImage" alt="">
       <p class="text-3xl">{{ this.resultMessage }}</p>
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
