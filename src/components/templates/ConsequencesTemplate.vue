@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-300 items-center w-auto h-auto">
+  <div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center w-auto h-auto">
     <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
       <div class="text-center mt-4 text-5xl font-mono underline text-white">
         FOLGEN
