@@ -5,6 +5,7 @@ export default {
       showResult: false,
       resultMessage: '',
       resultImage: '',
+      resultGif: '',
       enableEasterEgg: false,
       points: 0,
       question1Answered: false,
@@ -40,14 +41,17 @@ export default {
     },
     getResults () {
         if (this.points > 8) {
-          this.resultMessage = 'Stellverteter von Greta Thunberg'
-          this.resultImage = 'https://cdn.pixabay.com/photo/2019/12/14/15/38/map-4695145_960_720.png'
+          this.resultMessage = 'Naturmensch'
+          this.resultImage = 'https://media1.giphy.com/media/fC1HPbYpydrqM/giphy.gif?cid=ecf05e47uqneou0mpvtzit6cobk7b2pw5fj43ln1ujtdfjo2&rid=giphy.gif&ct=g'
+          this.resultGif = '1'
         } else if (this.points > 4) {
-          this.resultMessage = '0815 Mensch'
-          this.resultImage = 'https://cdn.pixabay.com/photo/2022/01/17/17/20/bored-6945309_960_720.png'
+          this.resultMessage = 'Durchschnitts Vermüller'
+          this.resultImage = 'https://media1.giphy.com/media/HG05lYgPrD1Re/giphy.gif?cid=ecf05e474l3gm4uzpn2h2dabvyqr6etny0gcj1vqpmg6vc42&rid=giphy.gif&ct=g'
+          this.resultGif = '2'
         } else {
           this.resultMessage = 'Saubär!'
-          this.resultImage = 'https://cdn.pixabay.com/photo/2018/03/12/16/33/mascot-3220133_960_720.png'
+          this.resultImage = 'https://media0.giphy.com/media/3o6ZtpRoYe9wbyfcBi/giphy.gif?cid=ecf05e47uqneou0mpvtzit6cobk7b2pw5fj43ln1ujtdfjo2&rid=giphy.gif&ct=g'
+          this.resultGif = '3'
         }
         this.showResult = true
     },
