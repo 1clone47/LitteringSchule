@@ -11,11 +11,11 @@
           </svg>
         </div>
         <div class="text-left">
-          <p class="xl:text-3xl xs:text-sm">Littering führt dazu, dass Abfälle und Müll auf Straßen, Parks, Stränden und anderen öffentlichen Orten liegen bleiben.</p>
+          <p class="xl:text-3xl xs:text-xs">Littering führt dazu, dass Abfälle und Müll auf Straßen, Parks, Stränden und anderen öffentlichen Orten liegen bleiben.</p>
         </div>
       </div>
-      <div class="flex flex-row w-auto h-auto xs:h-full space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-sm">
+      <div class="flex flex-row w-auto h-auto space-x-4">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
           <p class="font-bold xl:text-3xl underline">
             Umweltverschmutzung
           </p>
@@ -27,8 +27,8 @@
           <img src="https://cdn.pixabay.com/photo/2021/06/04/06/11/beach-6308884_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row w-auto h-auto xs:h-full space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+      <div class="flex flex-row w-auto h-auto space-x-4">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Schädigung der Tierwelt
           </p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Gesundheitsrisiken
           </p>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Ästhetische Beeinträchtigung
           </p>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Wirtschaftliche Kosten
           </p>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-sm xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Reputationsverlust
           </p>
@@ -88,7 +88,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
           </svg>
         </div>
-        <div class="text-left xl:text-3xl xs:text-sm">
+        <div class="text-left xl:text-3xl xs:text-xs">
           <p>Insgesamt können die Folgen von Littering erheblich sein und sowohl die Umwelt als auch die Gesellschaft in vielfältiger Weise beeinträchtigen.</p>
         </div>
       </div>
