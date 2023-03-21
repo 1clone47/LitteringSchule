@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# anwa - Littering.cloud Website
+Littering is the Website against littering. It was created for a school project.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Getting Started
 
-## Recommended IDE Setup
+### Prerequisites
+* NodeJs LTS (https://nodejs.org)
+* NPM (usually installed with NodeJS)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Installing
+Steps to get the live server working on your computer:
+
+1. Download/Clone the repository
+2. Open the console/terminal in this directory
+3. Install the dependencies with 'npm install'
+4. Start the dev server with 'npm run dev'
+
