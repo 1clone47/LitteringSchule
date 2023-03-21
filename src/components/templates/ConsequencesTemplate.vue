@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
           <p class="font-bold xl:text-3xl underline">
             Umweltverschmutzung
           </p>
@@ -23,63 +23,63 @@
             Verschmutzung von Boden, Wasser und Luft und Verschlimmerung des Klimakrise.
           </p>
         </div>
-        <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img src="https://cdn.pixabay.com/photo/2021/06/04/06/11/beach-6308884_1280.jpg" alt="">
+        <div class="flex-1 rounded-md">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2021/06/04/06/11/beach-6308884_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Schädigung der Tierwelt
           </p>
           <p>Tiere können durch Littering (z.B. Plastiktüten, Flaschen) geschädigt werden, indem sie den Müll fressen oder sich darin verfangen. </p>
         </div>
-        <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img src="https://cdn.pixabay.com/photo/2020/05/31/18/40/fish-5243741_1280.jpg" alt="">
+        <div class="flex-1 rounded-md">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2020/05/31/18/40/fish-5243741_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Gesundheitsrisiken
           </p>
           <p>Abfall und Müll können eine Vielzahl von Krankheiten und Infektionen verursachen, da sie Bakterien, Viren und andere schädliche Substanzen enthalten können.</p>
         </div>
-        <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img src="https://cdn.pixabay.com/photo/2016/11/14/03/05/surgery-1822458_1280.jpg" alt="">
+        <div class="flex-1 rounded-md">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2016/11/14/03/05/surgery-1822458_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Ästhetische Beeinträchtigung
           </p>
           <p>Littering kann die Schönheit von öffentlichen Plätzen beeinträchtigen und zu einer unansehnlichen und unattraktiven Umgebung führen.</p>
         </div>
-        <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img src="https://cdn.pixabay.com/photo/2020/03/03/02/26/trash-4897356_1280.jpg" alt="">
+        <div class="flex-1 rounded-md">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2020/03/03/02/26/trash-4897356_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Wirtschaftliche Kosten
           </p>
           <p>Die Beseitigung von Littering kann sehr teuer sein und Steuergelder in Anspruch nehmen, die für andere Zwecke verwendet werden könnten. </p>
         </div>
-        <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="">
+        <div class="flex-1 rounded-md">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Reputationsverlust
           </p>
           <p>Littering kann das Ansehen einer Stadt oder Region negativ beeinflussen, was sich auf den Tourismus und die lokale Wirtschaft auswirken kann.</p>
         </div>
-        <div class="flex-1 rounded-md border-4 border-blue-900">
-          <img src="https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg" alt="">
+        <div class="flex-1 rounded-md">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row space-x-4 border-4 rounded-md border-white bg-white items-center justify-center text-center">
