@@ -1,11 +1,11 @@
 <template>
-<div class="bg-blue-300 items-center">
+<div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300  items-center">
   <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
     <div class="text-center mt-4 text-5xl font-mono underline text-white">
       URSACHEN
     </div>
     <div class="flex-1 flex flex-row w-full space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-base">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Mangel an Müllbehältern
         </p>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-full space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-base">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Bequemlichkeit
         </p>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-full space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-base">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Mangelndes Umweltbewusstsein
         </p>
@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-full space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-base">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Kulturelle Normen
         </p>
@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-full space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-base">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Unachtsamkeit
         </p>
@@ -70,7 +70,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-full space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-base">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-blue-900 bg-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Lässigkeit
         </p>
