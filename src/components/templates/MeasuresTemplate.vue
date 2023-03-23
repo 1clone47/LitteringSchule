@@ -24,7 +24,7 @@
           </p>
         </div>
         <div class="flex-1 rounded-md">
-          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2017/11/13/15/59/call-2946023__340.jpg" alt="">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2016/05/09/09/57/megaphone-1381104_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -35,7 +35,7 @@
           <p>Durch die Bereitstellung von ausreichenden Müllbehältern und Recyclinganlagen können Menschen dazu ermutigt werden, ihren Müll ordnungsgemäß zu entsorgen. </p>
         </div>
         <div class="flex-1 rounded-md">
-          <img class="rounded-md" src="https://media.istockphoto.com/id/167490590/de/foto/bin-kollektion-tag.jpg?b=1&s=170667a&w=0&k=20&c=glFBOnJeqUeXHjFErqy_ubTCzJgwSsp_3Z4jd3ub_k4=" alt="">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2014/10/25/19/22/waste-separation-502952_960_720.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -46,7 +46,7 @@
           <p>Durch die Verhängung von Bußgeldern und Strafen für Littering kann eine abschreckende Wirkung erzielt werden und die Menschen dazu motiviert werden, ihren Müll ordnungsgemäß zu entsorgen. </p>
         </div>
         <div class="flex-1 rounded-md">
-          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2016/11/14/03/05/surgery-1822458_1280.jpg" alt="">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2017/07/10/23/49/club-2492011_1280.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -57,7 +57,7 @@
           <p>Durch regelmäßige Aufräumaktionen in öffentlichen Bereichen kann die Menge an Müll reduziert und das Bewusstsein für das Problem erhöht werden. </p>
         </div>
         <div class="flex-1 rounded-md">
-          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2020/03/03/02/26/trash-4897356_1280.jpg" alt="">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2015/11/17/10/32/garden-waste-1047259_960_720.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
@@ -68,7 +68,7 @@
           <p>Die Zusammenarbeit mit der Industrie kann dazu beitragen, Verpackungen und Materialien zu entwickeln, die leichter recycelt werden können und somit die Menge an Abfällen reduzieren. </p>
         </div>
         <div class="flex-1 rounded-md">
-          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_1280.jpg" alt="">
+          <img class="rounded-md" src="https://cdn.pixabay.com/photo/2014/06/21/20/11/power-station-374097_960_720.jpg" alt="">
         </div>
       </div>
     </div>
