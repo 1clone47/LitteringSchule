@@ -341,7 +341,7 @@ export default {
             <button :class="showAnswer3Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('D')">D: Ja</button>
           </div>
         </div>
-        <div id="Frage 4" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div id="Frage 4" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Wie hoch können die Geldstrafen ausfallen?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('A')">A: 60€</button>
@@ -352,7 +352,7 @@ export default {
             <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('D')">D: 5€ - 10€</button>
           </div>
         </div>
-        <div id="Frage 5" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div id="Frage 5" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Welchem Biom schadet Littering besonders?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer5Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('A')">A: Ozeane</button>
@@ -363,37 +363,37 @@ export default {
             <button :class="showAnswer5Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('D')">D: Gletscher</button>
           </div>
         </div>
-        <div id="Frage 6" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div id="Frage 6" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Wie viel Grundwasser verschmutzt ein Zigarettenstummel?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion6('A')">A: 5l - 10l</button>
-            <button :class="showAnswer6Right" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion6('B')">B: 40l - 60l</button>
+            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('A')">A: 5l - 10l</button>
+            <button :class="showAnswer6Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('B')">B: 40l - 60l</button>
           </div>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion6('C')">C: 30l - 50l</button>
-            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion6('D')">D: 42,56l - 61,91l</button>
+            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('C')">C: 30l - 50l</button>
+            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('D')">D: 42,56l - 61,91l</button>
           </div>
         </div>
-        <div id="Frage 7" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div id="Frage 7" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Welche deutsche Stadt ist am meisten vom Littering betroffen?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion7('A')">A: München</button>
-            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion7('B')">B: Berlin</button>
+            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('A')">A: München</button>
+            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('B')">B: Berlin</button>
           </div>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="showAnswer7Right" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion7('C')">C: Baden-Baden</button>
-            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion7('D')">D: Friesland</button>
+            <button :class="showAnswer7Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('C')">C: Baden-Baden</button>
+            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('D')">D: Friesland</button>
           </div>
         </div>
-        <div id="Frage 8" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div id="Frage 8" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Wie lange braucht eine Plastikflasche bis es zerfällt?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion8('A')">A: ~60 Jahre</button>
-            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion8('B')">B: ~100 Jahre</button>
+            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('A')">A: ~60 Jahre</button>
+            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('B')">B: ~100 Jahre</button>
           </div>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion8('C')">C: ~250 Jahre</button>
-            <button :class="showAnswer8Right" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion8('D')">D: ~400 Jahre</button>
+            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('C')">C: ~250 Jahre</button>
+            <button :class="showAnswer8Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('D')">D: ~400 Jahre</button>
           </div>
         </div>
       </div>
