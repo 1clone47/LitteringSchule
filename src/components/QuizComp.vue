@@ -364,7 +364,7 @@ export default {
           </div>
         </div>
         <div id="Frage 6" class="border-4 border-blue-900 bg-white rounded-md flex flex-col space-y-2 py-2">
-          <p class="text-xl">Wie viel Grundwasser verschmutzt eine Zigarettenstummel?</p>
+          <p class="text-xl">Wie viel Grundwasser verschmutzt ein Zigarettenstummel?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer6Wrong" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion6('A')">A: 5l - 10l</button>
             <button :class="showAnswer6Right" class="flex-1 border-2 border-blue-900 rounded-md text-center" @click="checkQuestion6('B')">B: 40l - 60l</button>
