@@ -326,11 +326,11 @@ export default {
         <div id="Frage 2" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Sotierst du deinen Müll?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="{'border-green-900 bg-gradient-to-r from-green-400 via-green-600 to-green-400 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('A')">A: Ja</button>
-            <button :class="{'border-yellow-900 bg-gradient-to-r from-yellow-300 via-yellow-600 to-yellow-300 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('B')">B: Gelegentlich</button>
+            <button :class="{'bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('A')">A: Ja</button>
+            <button :class="{'bg-gradient-to-r from-yellow-400 via-yellow-700 to-yellow-400 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('B')">B: Gelegentlich</button>
           </div>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
-            <button :class="{'border-orange-900 bg-gradient-to-r from-orange-300 via-orange-600 to-orange-300 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('C')">C: Vielleicht 😇</button>
+            <button :class="{'bg-gradient-to-r from-orange-600 via-orange-700 to-orange-600 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('C')">C: Vielleicht 😇</button>
             <button :class="{'bg-gradient-to-r from-red-500 via-red-700 to-red-500 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('D')">D: Nein</button>
           </div>
         </div>
