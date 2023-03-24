@@ -8,6 +8,7 @@
           py-8
           mx-auto
           md:flex md:justify-between md:items-center
+          xs:flex xs:justify-between xs:items-center
         "
       >
         <div class="flex items-center justify-between">
@@ -18,13 +19,14 @@
               font-bold
               text-gray-800
               md:text-2xl
+              xs:text-xl
               hover:text-blue-400
             "
           >
             Quiz
           </router-link>
           <!-- Mobile menu button -->
-          <div @click="showMenu = !showMenu" class="flex md:hidden">
+          <div @click="showMenu = !showMenu" class="flex md:hidden xs:hidden">
             <button
                 type="button"
                 class="
@@ -55,6 +57,12 @@
             md:items-center
             md:space-x-10
             md:mt-0
+            xs:flex
+            xs:space-y-0
+            xs:flex-row
+            xs:items-center
+            xs:space-x-10
+            xs:mt-0
           "
         >
           <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
