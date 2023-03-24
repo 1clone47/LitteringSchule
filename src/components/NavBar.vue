@@ -1,8 +1,8 @@
 <template>
   <div class="w-auto bg-white flex-col border-b-blue-900 border-b-4 flex">
-    <div class="flex flex-row h-16 items-center justify-center">
+    <div class="flex flex-row h-20 xs:h-16 items-center justify-center">
       <div class="flex-1 ml-4">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 xs:w-6 xs:h-6 fill-current" @click="triggerMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" :class="designMenu" class="w-8 h-8 xs:w-6 xs:h-6 fill-current" @click="triggerMenu">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </div>
@@ -21,6 +21,14 @@ export default {
   data (){
     return {
       showMenu: false
+    }
+  },
+  computed: {
+    designMenu () {
+      return {
+        'border-r-2 border-l-2': this.showMenu,
+        'border-t-2 border-b-2': !this.showMenu
+      }
     }
   },
   methods: {
