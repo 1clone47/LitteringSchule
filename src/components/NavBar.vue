@@ -1,6 +1,6 @@
 <template>
-  <div class="w-auto bg-white flex-col flex">
-    <div class="flex flex-row bg-white border-b-blue-900 h-16 items-center justify-center">
+  <div class="w-auto bg-white flex-col border-b-blue-900 border-b-4 flex">
+    <div class="flex flex-row h-16 items-center justify-center">
       <div class="flex-1 ml-4">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 xs:w-6 xs:h-6 fill-current" @click="triggerMenu">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

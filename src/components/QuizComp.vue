@@ -284,7 +284,7 @@ export default {
 
 <template>
   <div class="w-auto h-auto bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center space-y-12">
-    <div v-if="enableEasterEgg === false" class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white" @mouseover="triggerEasterEgg">Littering</div>
+    <div v-if="enableEasterEgg === false" class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white" @mouseover="triggerEasterEgg">QUIZ</div>
     <div v-else-if="showResult" class="flex flex-row mt-4 font-mono text-center items-center justify-center border-4 border-white mx-32 rounded-md bg-white space-x-8 text-3xl py-2 px-2">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
