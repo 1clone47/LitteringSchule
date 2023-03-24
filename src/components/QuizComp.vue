@@ -164,8 +164,12 @@ export default {
     },
   },
   methods: {
-    checkResults() {
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+    async checkResults() {
       if (this.question1Answered && this.question2Answered && this.question3Answered && this.question4Answered && this.question5Answered && this.question6Answered && this.question7Answered && this.question8Answered){
+        await this.sleep(2000)
         this.getResults()
       }
           },
