@@ -1,43 +1,110 @@
+<script>
+export default {
+  data() {
+    return {
+      showImgNmb: 1,
+      showImg: "https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg",
+      img1: "https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg",
+      img2: "https://cdn.pixabay.com/photo/2018/04/04/11/39/safety-net-3289548_1280.jpg",
+      img3: "https://cdn.pixabay.com/photo/2020/02/17/06/00/pollution-4855507_1280.jpg",
+      img4: "https://cdn.pixabay.com/photo/2020/03/09/04/25/beach-4914403_1280.jpg",
+      img5: "https://cdn.pixabay.com/photo/2014/10/20/12/28/rubbish-495213__480.jpg",
+      img6: "https://cdn.pixabay.com/photo/2014/09/08/15/16/pollution-439188__480.jpg",
+      img7: "https://cdn.pixabay.com/photo/2018/04/04/11/39/safety-net-3289549_960_720.jpg"
+    }
+  },
+  methods: {
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+    recentImage() {
+      if (this.showImgNmb > 2) {
+        this.showImgNmb -= 1
+      } else {
+        this.showImgNmb = 7
+      }
+      this.changeImage()
+    },
+    nextImage() {
+      if (this.showImgNmb < 7) {
+        this.showImgNmb += 1
+      } else {
+        this.showImgNmb = 1
+      }
+      this.changeImage()
+    },
+    async changeImage() {
+      if (this.showImgNmb === 1) {
+        this.showImg = this.img1
+      }
+      else if (this.showImgNmb === 2) {
+        this.showImg = this.img2
+      }
+      else if (this.showImgNmb === 3) {
+        this.showImg = this.img3
+      }
+      else if (this.showImgNmb === 4) {
+        this.showImg = this.img4
+      }
+      else if (this.showImgNmb === 5) {
+        this.showImg = this.img5
+      }
+      else if (this.showImgNmb === 6) {
+        this.showImg = this.img6
+      }
+      else if (this.showImgNmb === 7) {
+        this.showImg = this.img7
+      }
+    }
+  }
+}
+</script>
+
 <template>
-  <div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center w-auto h-auto justify-center items-center">
-    <div  class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">Littering</div>
+  <div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center w-auto h-auto justify-center items-center flex flex-col">
+    <div  class="text-center mt-8 mb-8 text-5xl font-sans xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">HOME</div>
     <div class="flex flex-row space-x-4 mx-2 py-8 xs:mx-2 border-4 rounded-md border-white bg-white items-center justify-center text-center mt-4">
-      <div class="text-center justify-center items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525" />
-        </svg>
-      </div>
-      <div class="text-left">
+      <div class="text-center space-y-4">
         <p class="xl:text-3xl xs:text-xs">
           Littering bezieht sich auf das unachtsame Wegwerfen von Abfall oder Müll auf öffentlichen Plätzen oder in der Natur. Dies kann zum Beispiel Zigarettenstummel, Plastikflaschen, Papierverpackungen oder Essensreste umfassen.
-          <br />
+        </p>
+        <p class="xl:text-3xl xs:text-xs">
           Littering ist ein weit verbreitetes Problem in vielen Städten und Gemeinden, da es nicht nur unansehnlich ist, sondern auch Umweltprobleme verursacht. Wenn Abfälle auf öffentlichen Plätzen liegen gelassen werden, können sie zum Beispiel in Flüsse und Ozeane gelangen, wo sie die Tierwelt und die Umwelt schädigen können.
-          <br />
+        </p>
+        <p class="xl:text-3xl xs:text-xs">
           Littering ist auch eine Form von Umweltverschmutzung und kann dazu beitragen, dass sich Krankheiten und Infektionen ausbreiten, wenn Abfall in der Nähe von Wohngebieten oder öffentlichen Einrichtungen aufbewahrt wird.
-          <br />
+        </p>
+        <p class="xl:text-3xl xs:text-xs">
           Es ist <a class="font-bold underline">wichtig</a>, dass jeder Verantwortung übernimmt und Müll ordnungsgemäß entsorgt, um Littering und seine negativen Auswirkungen auf unsere Umwelt zu reduzieren.
         </p>
       </div>
     </div>
-    <div class="flex snap-x snap-mandatory h-auto w-auto mx-2 overflow-scroll border-4 rounded-md border-white bg-white mt-4">
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg">
+    <div class="w-full h-full space-x-12 flex flex-col mb-16 items-center justify-center mx-32">
+      <div class="flex-1 object-fill items-center justify-center mt-16 mx-2">
+        <img :src="showImg" class="rounded-md w-full h-auto" alt="">
       </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2018/04/04/11/39/safety-net-3289548_1280.jpg">
+    </div>
+    <div class="flex flex-row space-x-16">
+      <div class="flex-1 items-center justify-center" @click="recentImage">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white rounded-full hover:border-2 hover:border-white hover:bg-white hover:text-black">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
       </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2020/02/17/06/00/pollution-4855507_1280.jpg">
+      <div class="text-center mt-4 text-white font-semibold">
+        Bild {{ showImgNmb }} von 7
       </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2020/03/09/04/25/beach-4914403_1280.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2014/10/20/12/28/rubbish-495213__480.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2014/09/08/15/16/pollution-439188__480.jpg" alt="">
+      <div class="flex-1 items-center justify-center" @click="nextImage">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white rounded-full hover:border-2 hover:border-white hover:bg-white hover:text-black">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
       </div>
     </div>
   </div>
 </template>
+
+<style>
+#hidden-scrollbar {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+</style>
