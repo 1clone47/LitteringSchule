@@ -1,3 +1,61 @@
+<script>
+export default {
+  data() {
+    return {
+      showImgNmb: 1,
+      showImg: "https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg",
+      img1: "https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg",
+      img2: "https://cdn.pixabay.com/photo/2018/04/04/11/39/safety-net-3289548_1280.jpg",
+      img3: "https://cdn.pixabay.com/photo/2020/02/17/06/00/pollution-4855507_1280.jpg",
+      img4: "https://cdn.pixabay.com/photo/2020/03/09/04/25/beach-4914403_1280.jpg",
+      img5: "https://cdn.pixabay.com/photo/2014/10/20/12/28/rubbish-495213__480.jpg",
+      img6: "https://cdn.pixabay.com/photo/2014/09/08/15/16/pollution-439188__480.jpg"
+    }
+  },
+  methods: {
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+    recentImage() {
+      if (this.showImgNmb > 2) {
+        this.showImgNmb -= 1
+      } else {
+        this.showImgNmb = 7
+      }
+      this.changeImage()
+    },
+    nextImage() {
+      if (this.showImgNmb < 7) {
+        this.showImgNmb += 1
+      } else {
+        this.showImgNmb = 1
+      }
+      this.changeImage()
+    },
+    async changeImage() {
+      if (this.showImgNmb === 1) {
+        this.showImg = this.img1
+      }
+      else if (this.showImgNmb === 2) {
+        this.showImg = this.img2
+      }
+      else if (this.showImgNmb === 3) {
+        this.showImg = this.img3
+      }
+      else if (this.showImgNmb === 4) {
+        this.showImg = this.img4
+      }
+      else if (this.showImgNmb === 5) {
+        this.showImg = this.img5
+      }
+      else if (this.showImgNmb === 6) {
+        this.showImg = this.img6
+      }
+    }
+  }
+}
+</script>
+
 <template>
   <div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center w-auto h-auto justify-center items-center flex flex-col">
     <div  class="text-center mt-8 mb-8 text-5xl font-sans  xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white animate-bounce">HOME</div>
@@ -17,26 +75,24 @@
         </p>
       </div>
     </div>
-    <div class="flex snap-x snap-mandatory h-auto w-1/2 mx-2 overflow-scroll rounded-md mt-2 select-none" id="hidden-scrollbar">
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2018/04/04/11/39/safety-net-3289548_1280.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2020/02/17/06/00/pollution-4855507_1280.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2020/03/09/04/25/beach-4914403_1280.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2014/10/20/12/28/rubbish-495213__480.jpg">
-      </div>
-      <div class="snap-start shrink-0 grid w-full place-items-center">
-        <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2014/09/08/15/16/pollution-439188__480.jpg" alt="">
+    <div class="w-full h-full space-x-12 flex flex-col mb-16 items-center justify-center mx-32">
+      <div class="flex-1 object-fill items-center justify-center mt-16">
+        <img :src="showImg" class="rounded-md w-full h-auto" alt="">
       </div>
     </div>
+    <div class="flex flex-row space-x-16">
+      <div class="flex-1 items-center justify-center" @click="recentImage">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white rounded-full hover:border-2 hover:border-white hover:bg-white hover:text-black">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+      </div>
+      <div class="flex-1 items-center justify-center" @click="nextImage">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white rounded-full hover:border-2 hover:border-white hover:bg-white hover:text-black">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </div>
+    </div>
+
   </div>
 </template>
 
