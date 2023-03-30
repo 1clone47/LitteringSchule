@@ -2,6 +2,7 @@
 export default {
   data () {
     return {
+      showQuestionNumb: 1,
       showResult: false,
       resultMessage: '',
       resultImage: '',
@@ -204,12 +205,17 @@ export default {
     triggerEasterEgg () {
        // this.enableEasterEgg = !this.enableEasterEgg
     },
+    async setShownQuestion(numb) {
+      await this.sleep(1000)
+      this.showQuestionNumb = numb
+    },
     checkQuestion1 (answer) {
       if (!this.question1Answered) {
         if (answer === 'A') {
           this.points += 1
         }
         this.question1Answered = true
+        this.setShownQuestion(2)
         this.checkResults()
       }
     },
@@ -225,6 +231,7 @@ export default {
           this.points += 0
         }
         this.question2Answered = true
+        this.setShownQuestion(3)
         this.checkResults()
       }
     },
@@ -234,6 +241,7 @@ export default {
           this.points += 1
         }
         this.question3Answered = true
+        this.setShownQuestion(4)
         this.checkResults()
       }
     },
@@ -243,6 +251,7 @@ export default {
           this.points += 1
         }
         this.question4Answered = true
+        this.setShownQuestion(5)
         this.checkResults()
       }
     },
@@ -252,6 +261,7 @@ export default {
           this.points += 1
         }
         this.question5Answered = true
+        this.setShownQuestion(6)
         this.checkResults()
       }
     },
@@ -261,6 +271,7 @@ export default {
           this.points += 1
         }
         this.question6Answered = true
+        this.setShownQuestion(7)
         this.checkResults()
       }
     },
@@ -270,6 +281,7 @@ export default {
           this.points += 1
         }
         this.question7Answered = true
+        this.setShownQuestion(8)
         this.checkResults()
       }
     },
@@ -287,7 +299,7 @@ export default {
 </script>
 
 <template>
-  <div class="w-auto h-auto bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center space-y-4">
+  <div class="w-full h-auto bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center space-y-4">
     <div  class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">QUIZ</div>
     <div class="flex flex-row space-x-4 mx-2 xs:mx-2 border-4 rounded-md border-white bg-white items-center justify-center text-center">
       <div class="text-center justify-center items-center">
@@ -308,18 +320,18 @@ export default {
     </div>
     <div v-else>
       <div class="flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-2 h-auto w-auto xxs:scroll-px-px">
-        <div id="Frage 1" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-if="showQuestionNumb === 1" id="Frage 1" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 h-56 py-4">
           <p class="text-xl xs:text-lg">Was bedeutet "Littering"?</p>
-          <div class="flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
             <button :class="showAnswer1Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
             <button :class="showAnswer1Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('B')">B: Einmaliges benutzen von Mehrwegprodukten</button>
           </div>
-          <div class="flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
             <button :class="showAnswer1Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('C')">C: Entsorgen von Abfällen neben Autobahnen</button>
             <button :class="showAnswer1Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
           </div>
         </div>
-        <div id="Frage 2" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 2" id="Frage 2" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 h-56 py-4">
           <p class="text-xl">Sotierst du deinen Müll?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="{'bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('A')">A: Ja</button>
@@ -330,7 +342,7 @@ export default {
             <button :class="{'bg-gradient-to-r from-red-500 via-red-700 to-red-500 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('D')">D: Nein</button>
           </div>
         </div>
-        <div id="Frage 3" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 3" id="Frage 3" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Ist Littering legal?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer3Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('A')">A: Nein</button>
@@ -341,7 +353,7 @@ export default {
             <button :class="showAnswer3Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('D')">D: Ja</button>
           </div>
         </div>
-        <div id="Frage 4" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 4" id="Frage 4" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Wie hoch können die Geldstrafen ausfallen?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('A')">A: 60€</button>
@@ -352,7 +364,7 @@ export default {
             <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('D')">D: 5€ - 10€</button>
           </div>
         </div>
-        <div id="Frage 5" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 5" id="Frage 5" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Welchem Biom schadet Littering besonders?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer5Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('A')">A: Ozeane</button>
@@ -363,7 +375,7 @@ export default {
             <button :class="showAnswer5Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('D')">D: Gletscher</button>
           </div>
         </div>
-        <div id="Frage 6" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 6" id="Frage 6" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Wie viel Grundwasser verschmutzt ein Zigarettenstummel?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('A')">A: 5l - 10l</button>
@@ -374,7 +386,7 @@ export default {
             <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('D')">D: 42,56l - 61,91l</button>
           </div>
         </div>
-        <div id="Frage 7" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 7" id="Frage 7" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Welche deutsche Stadt ist am meisten vom Littering betroffen?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('A')">A: München</button>
@@ -385,7 +397,7 @@ export default {
             <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('D')">D: Friesland</button>
           </div>
         </div>
-        <div id="Frage 8" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
+        <div v-else-if="showQuestionNumb === 8" id="Frage 8" class="border-4 border-gray-300 bg-white rounded-md flex flex-col space-y-2 py-2">
           <p class="text-xl">Wie lange braucht eine Plastikflasche bis es zerfällt?</p>
           <div class="flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
             <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('A')">A: ~60 Jahre</button>
