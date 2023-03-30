@@ -8,7 +8,18 @@
         </svg>
       </div>
       <div class="text-left">
-        <p class="xl:text-3xl xs:text-xs">Beantworte alle Fragen um herauszufinden was wie eine Sorte von Verbraucher du bist.</p>
+        <p class="xl:text-3xl xs:text-xs">
+          Littering bezieht sich auf das unachtsame Wegwerfen von Abfall oder Müll auf öffentlichen Plätzen oder in der Natur. Dies kann zum Beispiel Zigarettenstummel, Plastikflaschen, Papierverpackungen oder Essensreste umfassen.
+          <br />
+          <br />
+          Littering ist ein weit verbreitetes Problem in vielen Städten und Gemeinden, da es nicht nur unansehnlich ist, sondern auch Umweltprobleme verursacht. Wenn Abfälle auf öffentlichen Plätzen liegen gelassen werden, können sie zum Beispiel in Flüsse und Ozeane gelangen, wo sie die Tierwelt und die Umwelt schädigen können.
+          <br />
+          <br />
+          Littering ist auch eine Form von Umweltverschmutzung und kann dazu beitragen, dass sich Krankheiten und Infektionen ausbreiten, wenn Abfall in der Nähe von Wohngebieten oder öffentlichen Einrichtungen aufbewahrt wird.
+          <br />
+          <br />
+          Es ist <a class="font-bold underline">wichtig</a>, dass jeder Verantwortung übernimmt und Müll ordnungsgemäß entsorgt, um Littering und seine negativen Auswirkungen auf unsere Umwelt zu reduzieren.
+        </p>
       </div>
     </div>
     <div class="flex snap-x snap-mandatory h-auto w-auto mx-2 overflow-scroll border-4 rounded-md border-white bg-white mt-4">
