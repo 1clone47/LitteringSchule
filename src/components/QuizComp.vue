@@ -312,14 +312,14 @@ export default {
       </div>
     </div>
     <div v-if="showResult" class="w-full h-full text-center items-center flex flex-col text-white space-y-4 mt-80 mb-80">
-      <img class="flex-1 rounded-md h-1/3 w-1/3 mt-32 mb-28" :src="resultImage" alt="">
+      <img class="flex-1 rounded-md h-1/3 w-1/3 xs:w-4/5 xs:h-4/5 mt-32 mb-28 xs:mb-16 xs:mt-16" :src="resultImage" alt="">
       <p class="flex-1 text-3xl">DU BIST EIN</p>
       <p class="text-3xl font-bold animate-bounce">{{ this.resultMessage }}</p>
       <p class="w-auto mx-4 text-xs"><a :href="resultImage" target="_blank">CREDIT TO:<br /> {{ this.resultImage }}</a></p>
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else class="h-full w-full flex-col">
-      <div class="flex-1 flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-32 h-full w-auto xxs:scroll-px-px mt-80 mb-72">
+      <div class="flex-1 flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-32 h-full w-auto xxs:scroll-px-px sm:mt-80 xs:mt-16 xs:mb-24 sm:mb-72">
         <div v-if="showQuestionNumb === 1" id="Frage 1" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
           <p class="text-xl xs:text-lg">Was bedeutet "Littering"?</p>
           <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
