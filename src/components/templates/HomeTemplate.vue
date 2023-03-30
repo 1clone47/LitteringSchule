@@ -9,7 +9,8 @@ export default {
       img3: "https://cdn.pixabay.com/photo/2020/02/17/06/00/pollution-4855507_1280.jpg",
       img4: "https://cdn.pixabay.com/photo/2020/03/09/04/25/beach-4914403_1280.jpg",
       img5: "https://cdn.pixabay.com/photo/2014/10/20/12/28/rubbish-495213__480.jpg",
-      img6: "https://cdn.pixabay.com/photo/2014/09/08/15/16/pollution-439188__480.jpg"
+      img6: "https://cdn.pixabay.com/photo/2014/09/08/15/16/pollution-439188__480.jpg",
+      img7: "https://cdn.pixabay.com/photo/2018/04/04/11/39/safety-net-3289549_960_720.jpg"
     }
   },
   methods: {
@@ -51,6 +52,9 @@ export default {
       else if (this.showImgNmb === 6) {
         this.showImg = this.img6
       }
+      else if (this.showImgNmb === 7) {
+        this.showImg = this.img7
+      }
     }
   }
 }
@@ -58,7 +62,7 @@ export default {
 
 <template>
   <div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center w-auto h-auto justify-center items-center flex flex-col">
-    <div  class="text-center mt-8 mb-8 text-5xl font-sans  xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white animate-bounce">HOME</div>
+    <div  class="text-center mt-8 mb-8 text-5xl font-sans xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">HOME</div>
     <div class="flex flex-row space-x-4 mx-2 py-8 xs:mx-2 border-4 rounded-md border-white bg-white items-center justify-center text-center mt-4">
       <div class="text-center space-y-4">
         <p class="xl:text-3xl xs:text-xs">
@@ -76,7 +80,7 @@ export default {
       </div>
     </div>
     <div class="w-full h-full space-x-12 flex flex-col mb-16 items-center justify-center mx-32">
-      <div class="flex-1 object-fill items-center justify-center mt-16">
+      <div class="flex-1 object-fill items-center justify-center mt-16 mx-2">
         <img :src="showImg" class="rounded-md w-full h-auto" alt="">
       </div>
     </div>
@@ -86,13 +90,15 @@ export default {
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
         </svg>
       </div>
+      <div class="text-center mt-4 text-white font-semibold">
+        Bild {{ showImgNmb }} von 7
+      </div>
       <div class="flex-1 items-center justify-center" @click="nextImage">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white rounded-full hover:border-2 hover:border-white hover:bg-white hover:text-black">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
         </svg>
       </div>
     </div>
-
   </div>
 </template>
 
