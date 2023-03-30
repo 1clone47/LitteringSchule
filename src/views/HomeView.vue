@@ -1,7 +1,7 @@
 <script setup>
-import Quiz from '../components/QuizComp.vue'
+import Home from '../components/templates/HomeTemplate.vue'
 </script>
 
 <template>
-  <Quiz />
+  <Home />
 </template>

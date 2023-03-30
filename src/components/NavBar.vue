@@ -11,7 +11,10 @@
     <div v-if="showMenu" class="flex flex-col bg-white items-center space-y-2 mt-2 py-4 xs:text-sm">
       <ul class="space-y-1.5">
         <li class="hover:border-b-4 rounded-full hover:border-blue-900 px-32 text-center underline">
-          <RouterLink to="/" @click="closeMenu">Quiz</RouterLink>
+          <RouterLink to="/" @click="closeMenu">Home</RouterLink>
+        </li>
+        <li class="hover:border-b-4 rounded-full hover:border-blue-900 px-32 text-center underline">
+          <RouterLink to="/quiz" @click="closeMenu">Quiz</RouterLink>
         </li>
         <li class="hover:border-b-4 rounded-full hover:border-blue-900 px-32 text-center underline">
           <RouterLink to="/cause" @click="closeMenu">Ursachen</RouterLink>
