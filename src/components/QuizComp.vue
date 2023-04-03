@@ -162,6 +162,11 @@ export default {
       </p>
       <img class="rounded-md image mt-8 xs:mt-4" :src="resultImage" alt="">
       <p class="text-4xl xs:text-2xl text-white font-semibold mt-8 animate-bounce">{{ resultMessage }}</p>
+      <a class="text-2xl xs:text-xs text-white animate-pulse" :href="resultImage" target="_blank">
+        Herkunft Gif: <br />
+        giphy.com <br /> 
+        @family-guy
+      </a>
     </div>
   </div>
 </div>
