@@ -154,8 +154,18 @@ export default {
 </script>
 
 <template>
-<div id="container">
-  
+<div v-if="showResult" id="container">
+  <div class="transparent-background-result mx-4 rounded-md mt-32 xs:mt-20 items-center text-center justify-center">
+    <div class="flex flex-col text-center items-center">
+      <p class="text-5xl text-white font-bold xs:text-3xl">
+        Du bist ein
+      </p>
+      <img class="rounded-md image mt-8 xs:mt-4" :src="resultImage" alt="">
+      <p class="text-4xl xs:text-2xl text-white font-semibold mt-8 animate-bounce">{{ resultMessage }}</p>
+    </div>
+  </div>
+</div>
+<div v-else id="container">
   <div id="transparent-background" class="flex flex-row rounded-md mx-4 items-center text-center justify-center mt-8">
     <div class="items-start">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-28 h-28 xs:w-20 xs:h-20 animate-pulse">
@@ -358,6 +368,14 @@ export default {
   padding: 4px;
 }
 
+.transparent-background-result {
+  height: 80%;
+  background: transparent;
+  border: 4px solid white;
+  backdrop-filter: blur(1.5rem);
+  padding:4px;
+}
+
 .quiz-question {
   border: 2px solid white;
 }
@@ -380,5 +398,10 @@ export default {
 .orangeanswer {
   background: orange;
   border: 4px solid rgba(210, 107, 0, 1);
+}
+
+.image {
+  width: 40vh;
+  height: 40vh;
 }
 </style>
