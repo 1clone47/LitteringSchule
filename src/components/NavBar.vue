@@ -59,3 +59,32 @@ export default {
     </div>
   </div>
 </template>
+<script>
+export default {
+  data (){
+    return {
+      showMenu: false
+    }
+  },
+  computed: {
+
+    designMenu () {
+      return {
+        'animate-bounce': this.showMenu,
+        'border-r-2 border-l-2': this.showMenu,
+        'border-t-2 border-b-2': !this.showMenu
+      }
+    }
+  },
+  methods: {
+    triggerMenu () {
+      this.showMenu = !this.showMenu
+    },
+    closeMenu () {
+      this.showMenu = false
+    },
+    trigger () {
+    }
+  }
+}
+</script>
