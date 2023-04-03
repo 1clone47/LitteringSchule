@@ -15,9 +15,8 @@ import { RouterView } from 'vue-router'
 <style>
 #body {
   min-height: 100vh;
-  background: url("src/assets/background-fog.png");
+  background: blue;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
