@@ -1,3 +1,30 @@
+<script>
+export default {
+  data (){
+    return {
+      showMenu: false
+    }
+  },
+  computed: {
+
+    designMenu () {
+      return {
+        'animate-bounce': this.showMenu,
+        'border-r-2 border-l-2': this.showMenu,
+        'border-t-2 border-b-2': !this.showMenu
+      }
+    }
+  },
+  methods: {
+    triggerMenu () {
+      this.showMenu = !this.showMenu
+    },
+    closeMenu () {
+      this.showMenu = false
+    }
+  }
+}
+</script>
 <template>
   <div class="w-auto bg-white flex-col border-b-blue-900 border-b-4 flex">
     <div class="flex flex-row h-20 xs:h-16 items-center justify-center">
