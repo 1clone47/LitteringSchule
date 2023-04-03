@@ -89,13 +89,13 @@ export default {
       </div>
     </div>
     <div class="flex flex-col items-center justify-center text-center">
-      <img class="image xs:mt-2 mt-8 rounded-md" :src="shownImg" alt="">
+      <img class="home-image xs:mt-2 mt-8 rounded-md" :src="shownImg" alt="">
       <div class="flex flex-row mt-4 space-x-4">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 border-white border-2 rounded-full bg-white" @click="nextImage">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 border-white border-2 rounded-full bg-white" @click="previousImage">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
         </svg>
         <p class="text-white mt-1">{{ shownImgNmb }} von 6</p>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 border-white border-2 rounded-full bg-white" @click="previousImage">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 border-white border-2 rounded-full bg-white" @click="nextImage">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
         </svg>
       </div>
@@ -107,6 +107,11 @@ export default {
 .container-block {
   width: 100%;
   height: 80vh;
+}
+
+.home-image {
+  width: 40vh;
+  height: 40vh;
 }
 
 #transparent-background-home {

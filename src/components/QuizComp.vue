@@ -154,7 +154,7 @@ export default {
 </script>
 
 <template>
-<div v-if="showResult" id="container">
+<div v-if="showResult" class="text-container">
   <div class="transparent-background-result mx-4 rounded-md mt-32 xs:mt-20 items-center text-center justify-center">
     <div class="flex flex-col text-center items-center">
       <p class="text-5xl text-white font-bold xs:text-3xl">
@@ -350,7 +350,7 @@ export default {
  margin-top: 80px;
 }
 
-#container {
+.text-container {
   width: 100%;
   height: 80vh;
 }
