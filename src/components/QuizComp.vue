@@ -162,7 +162,8 @@ export default {
       </p>
       <img class="rounded-md image mt-8 xs:mt-4" :src="resultImage" alt="">
       <p class="text-4xl xs:text-2xl text-white font-semibold mt-8 animate-bounce">{{ resultMessage }}</p>
-      <a class="text-2xl xs:text-xs text-white animate-pulse" :href="resultImage" target="_blank">
+      <button class="text-white text-lg font-semibold border-2 rounded-md bg-blue-900 border-blue-900 py-2 px-2" @click="restartQuiz">Noch Einmal?</button>
+      <a class="text-base xs:text-xs text-white animate-pulse" :href="resultImage" target="_blank">
         Herkunft Gif: <br />
         giphy.com <br /> 
         @family-guy
