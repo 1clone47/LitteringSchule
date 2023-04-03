@@ -15,14 +15,11 @@ import { RouterView } from 'vue-router'
 <style>
 #body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: url("src/assets/background-fog.jpeg");
+  background: url("src/assets/background-fog.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 #footer {
   margin-top: auto;
