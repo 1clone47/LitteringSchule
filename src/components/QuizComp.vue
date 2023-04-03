@@ -300,15 +300,176 @@ export default {
 
 <template>
 <div id="container">
-  <div id="transparent-background" class="mt-4 flex flex-row rounded-md mx-4 items-center text-center justify-center">
+  
+  <div id="transparent-background" class="flex flex-row rounded-md mx-4 items-center text-center justify-center mt-8">
     <div class="items-start">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-28 h-28 xs:w-20 xs:h-20 animate-pulse">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
       </svg>
     </div>
     <div class="ml-4">
-      <p class="text-4xl font-bold xs:text-2xl mr-2">Unser Quiz</p>
-      <p class="text-3xl xl:font-semibold xs:text-base mr-2">Beantworte alle Fragen um herauszufinden zu welcher Sorte von Verbraucher du gehörst</p>
+      <p class="text-4xl font-bold xs:text-xl mr-2">Unser Quiz</p>
+      <p class="text-3xl xl:font-semibold xs:text-sm mr-2">Welcher Typ von Verbraucher bist du?</p>
+    </div>
+  </div>
+
+  <div id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Was versteht man unter dem Begriff Littering?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md" @click="checkQuestion1('A')">
+        Unangemessene Entsorgen von Abfällen
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md" @click="checkQuestion1('B')">
+        Einmaliges benutzen von Mehrwegprodukten
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md" @click="checkQuestion1('C')">
+        Entsorgen von Abfällen neben Autobahnen
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md" @click="checkQuestion1('D')">
+        Achtlos Müll aus dem Autofenster bei voller Fahrt werfen
+      </button>
+    </div>
+  </div>
+
+  <div v-if="question1Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+  <p class="text-3xl xs:text-base font-semibold">Sotierst du deinen Müll?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md" @click="checkQuestion2">
+        Ja
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Nein
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Vielleicht
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Gelegentlich
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="question2Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Ist Littering strafbar?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Nein
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Bestimmt
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Keine Ahnung
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Ja
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="question3Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Wie hoch können die Geldstrafen ausfallen?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        60,- €
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        200,- € bis 350,- € 
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        400,- € bis 15.000,- €
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        5,- € bis 10,- €
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="question4Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Welchem Biom schadet Littering besonders?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Ozeane
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Wälder
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Wüste
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Gletscher
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="question5Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Wie viel Grundwasser verschmutzt ein Zigarettenstummel?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        5l bis 10l
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        40l bis 60l
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        30l bis 50l
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        42.56l bis 61.91l
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="question6Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Welche deutsche Stadt ist am meisten vom Littering betroffen?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        München
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Berlin
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Baden-Baden
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        Friesland
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="question7Answered" id="transparent-background-quiz-container" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm">
+    <p class="text-3xl xs:text-base font-semibold">Wie lange braucht eine Plastikflasche bis es zerfällt</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        ~60 Jahre
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        ~100 Jahre
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button id="quiz-question" class="flex-1 rounded-md">
+        ~250 Jahre
+      </button>
+      <button id="quiz-question" class="flex-1 rounded-md">
+        ~400 Jahre
+      </button>
     </div>
   </div>
 </div>
@@ -325,9 +486,24 @@ export default {
 }
 
 #transparent-background {
+  height: 15%;
   color: white;
   background: transparent;
   border: 4px solid white;
   backdrop-filter: blur(1.5rem);
+  padding: 4px;
+}
+
+#transparent-background-quiz-container {
+  height: 40%;
+  color: white;
+  background: transparent;
+  border: 4px solid white;
+  backdrop-filter: blur(1.5rem);
+  padding: 4px;
+}
+
+#quiz-question {
+  border: 2px solid white;
 }
 </style>

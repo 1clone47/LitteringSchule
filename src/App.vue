@@ -17,7 +17,7 @@ import { RouterView } from 'vue-router'
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url("src/assets/background-nature.jpeg");
+  background: url("src/assets/background-fog.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
