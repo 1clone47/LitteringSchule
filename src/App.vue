@@ -5,10 +5,26 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <NavBar />
-  <RouterView />
-  <div class="mt-4">
-    <FooterBar />
+  <div id="body">
+    <NavBar />
+    <RouterView />
+    <FooterBar id="footer"/>
   </div>
-
 </template>
+
+<style>
+#body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("src/assets/background-fog.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+#footer {
+  margin-top: auto;
+}
+</style>
