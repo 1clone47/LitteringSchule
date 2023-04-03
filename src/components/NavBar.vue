@@ -55,6 +55,8 @@ export default {
     },
     closeMenu () {
       this.showMenu = false
+    },
+    trigger () {
     }
   }
 }
