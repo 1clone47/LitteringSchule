@@ -319,8 +319,8 @@ export default {
       <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
     </div>
     <div v-else class="h-full w-full flex-col">
-      <div class="flex-1 flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-32 h-full w-auto xxs:scroll-px-px sm:mt-80 xs:mt-16 xs:mb-24 sm:mb-72">
-        <div v-if="showQuestionNumb === 1" id="Frage 1" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+      <div class="flex-1 flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-32 h-full w-auto xxs:scroll-px-px xs:mb-24 sm:mb-72">
+        <div v-if="showQuestionNumb === 1" id="Frage 1" class="border-4 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
           <p class="text-xl xs:text-lg">Was bedeutet "Littering"?</p>
           <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
             <button :class="showAnswer1Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
