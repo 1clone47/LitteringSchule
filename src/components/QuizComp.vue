@@ -273,140 +273,94 @@ export default {
         Wälder
       </button>
     </div>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ wronganswer : question5Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion5('C')">
-        Wüste
-      </button>
-      <button :class="{ wronganswer : question5Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion5('D')">
-        Gletscher
-      </button>
-    </div>
-  </div>
-
-  <div v-else-if="showQuestionNumb === 6" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
-    <p class="text-3xl xs:text-base font-semibold">Wie viel Grundwasser verschmutzt ein Zigarettenstummel?</p>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ wronganswer : question6Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion6('A')">
-        5l bis 10l
-      </button>
-      <button :class="{ correctanswer : question6Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion6('B')">
-        40l bis 60l
-      </button>
-    </div>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ wronganswer : question6Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion6('C')">
-        30l bis 50l
-      </button>
-      <button :class="{ wronganswer : question6Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion6('D')">
-        42.56l bis 61.91l
-      </button>
-    </div>
-  </div>
-
-  <div v-else-if="showQuestionNumb === 7" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
-    <p class="text-3xl xs:text-base font-semibold">Welche deutsche Stadt ist am meisten vom Littering betroffen?</p>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ wronganswer : question7Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion7('A')">
-        München
-      </button>
-      <button :class="{ wronganswer : question7Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion7('B')">
-        Berlin
-      </button>
-    </div>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ correctanswer : question7Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion7('C')">
-        Baden-Baden
-      </button>
-      <button :class="{ wronganswer : question7Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion7('D')">
-        Friesland
-      </button>
-    </div>
-  </div>
-
-  <div v-else-if="showQuestionNumb === 8" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
-    <p class="text-3xl xs:text-base font-semibold">Wie lange braucht eine Plastikflasche bis es zerfällt</p>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ wronganswer : question8Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion8('A')">
-        ~60 Jahre
-      </button>
-      <button :class="{ wronganswer : question8Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion8('B')">
-        ~100 Jahre
-      </button>
-    </div>
-    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
-      <button :class="{ wronganswer : question8Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion8('C')">
-        ~250 Jahre
-      </button>
-      <button :class="{ correctanswer : question8Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion8('D')">
-        ~400 Jahre
-      </button>
-    </div>
-  </div>
-</div>
-</template>
-
-<style>
-#quiz-questions {
- margin-top: 80px;
-}
-
-.text-container {
-  width: 100%;
-  height: 80vh;
-}
-
-#transparent-background {
-  height: 15%;
-  color: white;
-  background: transparent;
-  border: 4px solid white;
-  backdrop-filter: blur(1.5rem);
-  padding: 4px;
-}
-
-.transparent-background-quiz-container {
-  height: 40%;
-  color: white;
-  background: transparent;
-  border: 4px solid white;
-  backdrop-filter: blur(1.5rem);
-  padding: 4px;
-}
-
-.transparent-background-result {
-  height: 80%;
-  background: transparent;
-  border: 4px solid white;
-  backdrop-filter: blur(1.5rem);
-  padding:4px;
-}
-
-.quiz-question {
-  border: 2px solid white;
-}
-
-.correctanswer {
-  background: rgba(58, 198, 27, 0.8);
-  border: 4px solid green;
-}
-
-.wronganswer {
-  background: red;
-  border: 4px solid rgba(167, 34, 4, 1);
-}
-
-.yellowanswer {
-  background: yellow;
-  border: 4px solid rgba(254, 161, 0, 1);
-}
-
-.orangeanswer {
-  background: orange;
-  border: 4px solid rgba(210, 107, 0, 1);
-}
-
-.image {
-  width: 40vh;
-  height: 40vh;
-}
-</style>
+    <div v-else class="h-full w-full flex-col">
+      <div class="flex-1 flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-32 h-full w-auto xxs:scroll-px-px xs:mb-24 sm:mb-72">
+        <div v-if="showQuestionNumb === 1" id="Frage 1" class="border-4 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl xs:text-lg">Was bedeutet "Littering"?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
+            <button :class="showAnswer1Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('A')">A: Unangemessene Entsorgung von Abfällen 🗑️</button>
+            <button :class="showAnswer1Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('B')">B: Einmaliges benutzen von Mehrwegprodukten</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 xl:h-12 xs:h-auto xs:text-sm">
+            <button :class="showAnswer1Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('C')">C: Entsorgen von Abfällen neben Autobahnen</button>
+            <button :class="showAnswer1Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion1('D')">D: Achtlos Müll aus dem Autofenster bei voller Fahrt zu werfen</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 2" id="Frage 2" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Sotierst du deinen Müll?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="{'bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('A')">A: Ja</button>
+            <button :class="{'bg-gradient-to-r from-yellow-400 via-yellow-700 to-yellow-400 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('B')">B: Gelegentlich</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="{'bg-gradient-to-r from-orange-600 via-orange-700 to-orange-600 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('C')">C: Vielleicht 😇</button>
+            <button :class="{'bg-gradient-to-r from-red-500 via-red-700 to-red-500 text-white': question2Answered}" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion2('D')">D: Nein</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 3" id="Frage 3" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Ist Littering legal?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer3Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('A')">A: Nein</button>
+            <button :class="showAnswer3Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('B')">B: Bestimmt</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer3Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('C')">C: Keine Ahnung</button>
+            <button :class="showAnswer3Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion3('D')">D: Ja</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 4" id="Frage 4" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Wie hoch können die Geldstrafen ausfallen?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('A')">A: 60€</button>
+            <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('B')">B: 200€ - 350€</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer4Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('C')">C: 400€ - 15.000€</button>
+            <button :class="showAnswer4Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion4('D')">D: 5€ - 10€</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 5" id="Frage 5" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Welchem Biom schadet Littering besonders?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer5Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('A')">A: Ozeane</button>
+            <button :class="showAnswer5Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('B')">B: Wälder</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer5Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('C')">C: Wüste</button>
+            <button :class="showAnswer5Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion5('D')">D: Gletscher</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 6" id="Frage 6" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Wie viel Grundwasser verschmutzt ein Zigarettenstummel?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('A')">A: 5l - 10l</button>
+            <button :class="showAnswer6Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('B')">B: 40l - 60l</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('C')">C: 30l - 50l</button>
+            <button :class="showAnswer6Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion6('D')">D: 42,56l - 61,91l</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 7" id="Frage 7" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Welche deutsche Stadt ist am meisten vom Littering betroffen?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('A')">A: München</button>
+            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('B')">B: Berlin</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer7Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('C')">C: Baden-Baden</button>
+            <button :class="showAnswer7Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion7('D')">D: Friesland</button>
+          </div>
+        </div>
+        <div v-else-if="showQuestionNumb === 8" id="Frage 8" class="border-4 border-gray-300 bg-white border-white rounded-md flex flex-col space-y-2 h-80 py-4">
+          <p class="text-xl">Wie lange braucht eine Plastikflasche bis es zerfällt?</p>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('A')">A: ~60 Jahre</button>
+            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('B')">B: ~100 Jahre</button>
+          </div>
+          <div class="flex-1 flex flex-row space-x-4 ml-4 mr-4 h-10 xs:text-sm">
+            <button :class="showAnswer8Wrong" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('C')">C: ~250 Jahre</button>
+            <button :class="showAnswer8Right" class="flex-1 border-2 border-stone-400 rounded-md text-center" @click="checkQuestion8('D')">D: ~400 Jahre</button>
+          </div>
+        </div>
+      </div>
