@@ -1,11 +1,11 @@
 <template>
-<div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300  items-center w-auto h-auto">
+<div class="items-center w-full h-full">
   <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
     <div class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">
       URSACHEN
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+      <div id="transparent-background" class="flex-1 flex flex-col items-center justify-center text-center rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Mangel an Müllbehältern
         </p>
@@ -85,3 +85,13 @@
   </div>
 </div>
 </template>
+
+<style>
+
+#transparent-background {
+  color: white;
+  background: transparent;
+  border: 4px solid white;
+  backdrop-filter: blur(15px);
+}
+</style>

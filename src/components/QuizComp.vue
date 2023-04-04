@@ -19,151 +19,6 @@ export default {
       question8Answered: false,
     }
   },
-  computed: {
-    showAnswer1Wrong() {
-        return {
-          'border-red-900': this.question1Answered,
-          'bg-gradient-to-r': this.question1Answered,
-          'from-red-500': this.question1Answered,
-          'via-red-700': this.question1Answered,
-          'to-red-500': this.question1Answered,
-          'text-white': this.question1Answered
-        }
-      },
-    showAnswer1Right() {
-      return {
-        'border-green-900': this.question1Answered,
-        'bg-gradient-to-r': this.question1Answered,
-        'from-green-600': this.question1Answered,
-        'via-green-700': this.question1Answered,
-        'to-green-600': this.question1Answered,
-        'text-white': this.question1Answered
-      }
-    },
-
-    showAnswer3Wrong() {
-      return {
-        'border-red-900': this.question3Answered,
-        'bg-gradient-to-r': this.question3Answered,
-        'from-red-500': this.question3Answered,
-        'via-red-700': this.question3Answered,
-        'to-red-500': this.question3Answered,
-        'text-white': this.question3Answered
-      }
-    },
-    showAnswer3Right() {
-      return {
-        'border-green-900': this.question3Answered,
-        'bg-gradient-to-r': this.question3Answered,
-        'from-green-600': this.question3Answered,
-        'via-green-700': this.question3Answered,
-        'to-green-600': this.question3Answered,
-        'text-white': this.question3Answered
-      }
-    },
-
-    showAnswer4Wrong() {
-      return {
-        'border-red-900': this.question4Answered,
-        'bg-gradient-to-r': this.question4Answered,
-        'from-red-500': this.question4Answered,
-        'via-red-700': this.question4Answered,
-        'to-red-500': this.question4Answered,
-        'text-white': this.question4Answered
-      }
-    },
-    showAnswer4Right() {
-      return {
-        'border-green-900': this.question4Answered,
-        'bg-gradient-to-r': this.question4Answered,
-        'from-green-600': this.question4Answered,
-        'via-green-700': this.question4Answered,
-        'to-green-600': this.question4Answered,
-        'text-white': this.question4Answered
-      }
-    },
-
-    showAnswer5Wrong() {
-      return {
-        'border-red-900': this.question5Answered,
-        'bg-gradient-to-r': this.question5Answered,
-        'from-red-500': this.question5Answered,
-        'via-red-700': this.question5Answered,
-        'to-red-500': this.question5Answered,
-        'text-white': this.question5Answered
-      }
-    },
-    showAnswer5Right() {
-      return {
-        'border-green-900': this.question5Answered,
-        'bg-gradient-to-r': this.question5Answered,
-        'from-green-600': this.question5Answered,
-        'via-green-700': this.question5Answered,
-        'to-green-600': this.question5Answered,
-        'text-white': this.question5Answered
-      }
-    },
-    showAnswer6Wrong() {
-      return {
-        'border-red-900': this.question6Answered,
-        'bg-gradient-to-r': this.question6Answered,
-        'from-red-500': this.question6Answered,
-        'via-red-700': this.question6Answered,
-        'to-red-500': this.question6Answered,
-        'text-white': this.question6Answered
-      }
-    },
-    showAnswer6Right() {
-      return {
-        'border-green-900': this.question6Answered,
-        'bg-gradient-to-r': this.question6Answered,
-        'from-green-600': this.question6Answered,
-        'via-green-700': this.question6Answered,
-        'to-green-600': this.question6Answered,
-        'text-white': this.question6Answered
-      }
-    },
-    showAnswer7Wrong() {
-      return {
-        'border-red-900': this.question7Answered,
-        'bg-gradient-to-r': this.question7Answered,
-        'from-red-500': this.question7Answered,
-        'via-red-700': this.question7Answered,
-        'to-red-500': this.question7Answered,
-        'text-white': this.question7Answered
-      }
-    },
-    showAnswer7Right() {
-      return {
-        'border-green-900': this.question7Answered,
-        'bg-gradient-to-r': this.question7Answered,
-        'from-green-600': this.question7Answered,
-        'via-green-700': this.question7Answered,
-        'to-green-600': this.question7Answered,
-        'text-white': this.question7Answered
-      }
-    },
-    showAnswer8Wrong() {
-      return {
-        'border-red-900': this.question8Answered,
-        'bg-gradient-to-r': this.question8Answered,
-        'from-red-500': this.question8Answered,
-        'via-red-700': this.question8Answered,
-        'to-red-500': this.question8Answered,
-        'text-white': this.question8Answered
-      }
-    },
-    showAnswer8Right() {
-      return {
-        'border-green-900': this.question8Answered,
-        'bg-gradient-to-r': this.question8Answered,
-        'from-green-600': this.question8Answered,
-        'via-green-700': this.question8Answered,
-        'to-green-600': this.question8Answered,
-        'text-white': this.question8Answered
-      }
-    },
-  },
   methods: {
     sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
@@ -211,16 +66,17 @@ export default {
     },
     checkQuestion1 (answer) {
       if (!this.question1Answered) {
+        this.question1Answered = true
         if (answer === 'A') {
           this.points += 1
         }
-        this.question1Answered = true
         this.setShownQuestion(2)
         this.checkResults()
       }
     },
     checkQuestion2 (answer) {
       if (!this.question2Answered) {
+        this.question2Answered = true
         if (answer === 'A') {
           this.points += 3
         } else if (answer === 'B') {
@@ -230,67 +86,66 @@ export default {
         } else {
           this.points += 0
         }
-        this.question2Answered = true
         this.setShownQuestion(3)
         this.checkResults()
       }
     },
     checkQuestion3 (answer) {
       if (!this.question3Answered) {
+        this.question3Answered = true
         if (answer === 'A') {
           this.points += 1
         }
-        this.question3Answered = true
         this.setShownQuestion(4)
         this.checkResults()
       }
     },
     checkQuestion4 (answer) {
       if (!this.question4Answered) {
+        this.question4Answered = true
         if (answer === 'C') {
           this.points += 1
         }
-        this.question4Answered = true
         this.setShownQuestion(5)
         this.checkResults()
       }
     },
     checkQuestion5 (answer) {
       if (!this.question5Answered) {
+        this.question5Answered = true
         if (answer === 'A') {
           this.points += 1
         }
-        this.question5Answered = true
         this.setShownQuestion(6)
         this.checkResults()
       }
     },
     checkQuestion6 (answer) {
       if (!this.question6Answered) {
+        this.question6Answered = true
         if (answer === 'B') {
           this.points += 1
         }
-        this.question6Answered = true
         this.setShownQuestion(7)
         this.checkResults()
       }
     },
     checkQuestion7 (answer) {
       if (!this.question7Answered) {
+        this.question7Answered = true
         if (answer === 'C') {
           this.points += 1
         }
-        this.question7Answered = true
         this.setShownQuestion(8)
         this.checkResults()
       }
     },
     checkQuestion8 (answer) {
       if (!this.question8Answered) {
+        this.question8Answered = true
         if (answer === 'D') {
           this.points += 1
         }
-        this.question8Answered = true
         this.checkResults()
       }
     }
@@ -299,24 +154,124 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center space-y-4">
-    <div  class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">QUIZ</div>
-    <div v-if="!showResult" class="flex flex-row space-x-4 mx-2 xs:mx-2 border-4 rounded-md border-white bg-white items-center justify-center text-center">
-      <div class="text-center justify-center items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525" />
-        </svg>
-      </div>
-      <div class="text-left mt-4">
-        <p class="xl:text-3xl xs:text-xs">Beantworte alle Fragen um herauszufinden was wie eine Sorte von Verbraucher du bist.</p>
-      </div>
+<div v-if="showResult" class="text-container">
+  <div class="transparent-background-result mx-4 rounded-md mt-32 xs:mt-20 items-center text-center justify-center">
+    <div class="flex flex-col text-center items-center">
+      <p class="text-5xl text-white font-bold xs:text-3xl">
+        Du bist ein
+      </p>
+      <img class="rounded-md image mt-8 xs:mt-4" :src="resultImage" alt="">
+      <p class="text-4xl xs:text-2xl text-white font-semibold mt-8 animate-bounce">{{ resultMessage }}</p>
+      <button class="text-white text-lg xs:text-xs xs: xs:px-1 font-semibold border-2 rounded-md bg-blue-900 border-blue-900 py-2 px-2" @click="restartQuiz">Noch Einmal?</button>
+      <a class="text-base xs:text-xs text-white animate-pulse" :href="resultImage" target="_blank">
+        Herkunft Gif: <br />
+        giphy.com | @family-guy
+      </a>
     </div>
-    <div v-if="showResult" class="w-full h-full text-center items-center flex flex-col text-white space-y-4 mt-80 mb-80">
-      <img class="flex-1 rounded-md h-1/3 w-1/3 xs:w-4/5 xs:h-4/5 mt-32 mb-28 xs:mb-16 xs:mt-16" :src="resultImage" alt="">
-      <p class="flex-1 text-3xl">DU BIST EIN</p>
-      <p class="text-3xl font-bold animate-bounce">{{ this.resultMessage }}</p>
-      <p class="w-auto mx-4 text-xs"><a :href="resultImage" target="_blank">CREDIT TO:<br /> {{ this.resultImage }}</a></p>
-      <button class="border-4 py-4 px-4 space-y-2 border-blue-900 bg-blue-900 text-xl rounded-md" @click="restartQuiz">NOCH EINMAL?</button>
+  </div>
+</div>
+<div v-else id="container">
+  <div id="transparent-background" class="flex flex-row rounded-md mx-4 items-center text-center justify-center mt-8">
+    <div class="items-start">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-28 h-28 xs:w-20 xs:h-20 animate-pulse">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+      </svg>
+    </div>
+    <div class="ml-4">
+      <p class="text-4xl font-bold xs:text-xl mr-2">Unser Quiz</p>
+      <p class="text-3xl xl:font-semibold xs:text-sm mr-2">Welcher Typ von Verbraucher bist du?</p>
+    </div>
+  </div>
+
+  <div v-if="showQuestionNumb === 1" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
+    <p class="text-3xl xs:text-base font-semibold">Was versteht man unter dem Begriff Littering?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ correctanswer : question1Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion1('A')">
+        Unangemessene Entsorgen von Abfällen
+      </button>
+      <button :class="{ wronganswer : question1Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion1('B')">
+        Einmaliges benutzen von Mehrwegprodukten
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ wronganswer : question1Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion1('C')">
+        Entsorgen von Abfällen neben Autobahnen
+      </button>
+      <button :class="{ wronganswer : question1Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion1('D')">
+        Achtlos Müll aus dem Autofenster bei voller Fahrt werfen
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="showQuestionNumb === 2" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
+  <p class="text-3xl xs:text-base font-semibold">Sotierst du deinen Müll?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ correctanswer : question2Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion2('A')">
+        Ja
+      </button>
+      <button :class="{ wronganswer : question2Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion2('B')">
+        Nein
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ yellowanswer : question2Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion2('C')">
+        Vielleicht
+      </button>
+      <button :class="{ orangeanswer : question2Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion2('D')">
+        Gelegentlich
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="showQuestionNumb === 3" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
+    <p class="text-3xl xs:text-base font-semibold">Ist Littering strafbar?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ wronganswer : question3Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion3('A')">
+        Nein
+      </button>
+      <button :class="{ wronganswer : question3Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion3('B')">
+        Bestimmt
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ wronganswer : question3Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion3('C')">
+        Keine Ahnung
+      </button>
+      <button :class="{ correctanswer : question3Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion3('D')">
+        Ja
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="showQuestionNumb === 4" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
+    <p class="text-3xl xs:text-base font-semibold">Wie hoch können die Geldstrafen ausfallen?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ wronganswer : question4Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion4('A')">
+        60,- €
+      </button>
+      <button :class="{ wronganswer : question4Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion4('B')">
+        200,- € bis 350,- € 
+      </button>
+    </div>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ correctanswer : question4Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion4('C')">
+        400,- € bis 15.000,- €
+      </button>
+      <button :class="{ wronganswer : question4Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion4('D')">
+        5,- € bis 10,- €
+      </button>
+    </div>
+  </div>
+
+  <div v-else-if="showQuestionNumb === 5" class="flex flex-col rounded-md mx-4 items-center text-center justify-center space-y-2 mt-52 xs:mt-24 xs:text-sm transparent-background-quiz-container">
+    <p class="text-3xl xs:text-base font-semibold">Welchem Biom schadet Littering besonders?</p>
+    <div class="flex-1 flex flex-row w-full space-x-2 text-xl xs:text-base">
+      <button :class="{ correctanswer : question5Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion5('A')">
+        Ozeane
+      </button>
+      <button :class="{ wronganswer : question5Answered }" class="flex-1 rounded-md quiz-question" @click="checkQuestion5('B')">
+        Wälder
+      </button>
     </div>
     <div v-else class="h-full w-full flex-col">
       <div class="flex-1 flex flex-col text-center space-y-4 mx-auto xs:mx-2 sm:mx-2 md:mx-2 shadow-2xl xl:mx-32 h-full w-auto xxs:scroll-px-px xs:mb-24 sm:mb-72">
@@ -409,6 +364,3 @@ export default {
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</template>

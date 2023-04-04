@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 items-center w-auto h-auto">
+  <div class="items-center w-auto h-auto">
     <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
       <div class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">
         MAßNAHMEN
