@@ -8,4 +8,8 @@
 
 <script setup>
 import Causes from '@/components/templates/CauseTemplate.vue'
+
+useSeoMeta({
+    title: 'Ursachen | Littering'
+})
 </script>

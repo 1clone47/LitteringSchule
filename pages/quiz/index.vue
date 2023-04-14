@@ -8,4 +8,8 @@
 
 <script setup>
 import Quiz from '@/components/templates/QuizTemplate.vue'
+
+useSeoMeta({
+    title: 'Quiz | Littering'
+})
 </script>

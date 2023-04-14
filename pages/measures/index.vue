@@ -9,4 +9,8 @@
 
 <script setup>
 import Measures from '@/components/templates/MeasuresTemplate.vue'
+
+useSeoMeta({
+    title: 'Maßnahmen | Littering'
+})
 </script>
