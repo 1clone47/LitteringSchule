@@ -1,10 +1,10 @@
 <template>
-  <div class="items-center w-auto h-auto">
-    <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
-      <div class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">
+  <div class="bg-light-wallpaper dark:bg-dark-wallpaper py-4 bg-cover bg-fixed items-center w-auto h-auto scrollbar-hide" id="measures-container">
+    <div class="flex flex-col text-center mx-2 rounded-md space-y-4">
+      <div class="text-center text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white backdrop-blur-md">
         MAßNAHMEN
       </div>
-      <div class="flex flex-row space-x-4 border-4 rounded-md border-white bg-white items-center justify-center text-center">
+      <div class="flex flex-row space-x-4 border-4 rounded-md border-white backdrop-blur-md text-white items-center justify-center text-center">
         <div class="text-center justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
           <p class="font-bold xl:text-3xl underline">
             Aufklärungskampagnen
           </p>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Müllbehälter und Recyclinganlagen
           </p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Strafen
           </p>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Aufräumaktionen und Bürgerbeteiligung
           </p>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Zusammenarbeit mit der Industrie
           </p>
@@ -74,3 +74,10 @@
     </div>
   </div>
 </template>
+
+<style>
+#measures-container {
+  width: 100%;
+  height: 100%;
+}
+</style>

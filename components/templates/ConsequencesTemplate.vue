@@ -1,10 +1,10 @@
 <template>
-  <div class="items-center w-auto h-auto">
-    <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
-      <div class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">
+  <div class="bg-light-wallpaper dark:bg-dark-wallpaper bg-cover bg-fixed items-center w-auto h-auto scrollbar-hide py-4" id="consequences-template">
+    <div class="flex flex-col text-center mx-2 rounded-md space-y-4">
+      <div class="text-center text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white backdrop-blur-md">
         FOLGEN
       </div>
-      <div class="flex flex-row space-x-4 border-4 rounded-md border-white bg-white items-center justify-center text-center">
+      <div class="flex flex-row space-x-4 border-4 rounded-md border-white backdrop-blur-md text-white items-center justify-center text-center">
         <div class="text-center justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
           <p class="font-bold xl:text-3xl underline">
             Umweltverschmutzung
           </p>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Schädigung der Tierwelt
           </p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Gesundheitsrisiken
           </p>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Ästhetische Beeinträchtigung
           </p>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Wirtschaftliche Kosten
           </p>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="flex flex-row w-auto h-auto space-x-4">
-        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xs:text-xs xl:text-2xl">
+        <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xs:text-xs xl:text-2xl">
           <p class="font-bold xl:text-3xl underline">
             Reputationsverlust
           </p>
@@ -82,7 +82,7 @@
           <img class="rounded-md" src="https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-row space-x-4 border-4 rounded-md border-white bg-white items-center justify-center text-center">
+      <div class="flex flex-row space-x-4 border-4 rounded-md border-white backdrop-blur-md text-white items-center justify-center text-center">
         <div class="text-center justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
@@ -95,3 +95,10 @@
     </div>
   </div>
 </template>
+
+<style>
+#consequences-container {
+  height: 100%;
+  width: 100%;
+}
+</style>

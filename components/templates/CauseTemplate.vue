@@ -1,11 +1,11 @@
 <template>
-<div class="items-center w-full h-full">
-  <div class="flex flex-col text-center mt-4 mx-2 rounded-md space-y-4">
-    <div class="text-center mt-4 text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white">
+<div class="bg-light-wallpaper dark:bg-dark-wallpaper bg-cover bg-fixed items-center w-auto h-auto scrollbar-hide py-4" id="cause-container">
+  <div class="flex flex-col text-center mx-2 rounded-md space-y-4">
+    <div class="text-center text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 text-white backdrop-blur-md">
       URSACHEN
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div id="transparent-background" class="flex-1 flex flex-col items-center justify-center text-center rounded-md xl:text-2xl xs:text-xs">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Mangel an Müllbehältern
         </p>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Bequemlichkeit
         </p>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Mangelndes Umweltbewusstsein
         </p>
@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Kulturelle Normen
         </p>
@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Unachtsamkeit
         </p>
@@ -70,7 +70,7 @@
       </div>
     </div>
     <div class="flex-1 flex flex-row w-auto h-auto space-x-4">
-      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white bg-white rounded-md xl:text-2xl xs:text-xs">
+      <div class="flex-1 flex flex-col border-4 items-center justify-center text-center border-white backdrop-blur-md text-white rounded-md xl:text-2xl xs:text-xs">
         <p class="font-bold xl:text-3xl underline">
           Lässigkeit
         </p>
@@ -87,11 +87,8 @@
 </template>
 
 <style>
-
-#transparent-background {
-  color: white;
-  background: transparent;
-  border: 4px solid white;
-  backdrop-filter: blur(15px);
+#cause-container {
+  width: 100%;
+  height: 100%;
 }
 </style>

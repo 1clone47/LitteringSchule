@@ -1,17 +1,42 @@
-# anwa - Littering.cloud Website
-Littering is the Website against littering. It was created for a school project.
+# Nuxt 3 Minimal Starter
 
-## Getting Started
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-### Prerequisites
-* NodeJs LTS (https://nodejs.org)
-* NPM (usually installed with NodeJS)
+## Setup
 
-### Installing
-Steps to get the live server working on your computer:
+Make sure to install the dependencies:
 
-1. Download/Clone the repository
-2. Open the console/terminal in this directory
-3. Install the dependencies with 'npm install'
-4. Start the dev server with 'npm run dev'
+```bash
+# yarn
+yarn install
 
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
