@@ -24,15 +24,15 @@
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router';
 
-//Route Information
+
+// data
 const route = useRoute()
 const path = route.name
 
-// Data
 const showMenu = ref(false)
 const showContent = ref(false)
 
-// Methods
+// methods
 const sleep = ((ms) => {
   return new Promise(resolve => setTimeout(resolve, ms))
 })
