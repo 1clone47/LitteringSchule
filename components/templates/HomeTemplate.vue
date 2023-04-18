@@ -42,6 +42,7 @@
   </div>
 </template>
 
+
 <style>
 #home-container {
   width: 100%;

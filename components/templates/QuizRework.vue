@@ -350,12 +350,5 @@
 </script>
 
 <style scoped>
-#quiz-container {
-  height: 83vh; 
-  width: 100%;
-}
-#question {
-  margin-top: 80px;
-}
 
 </style>
