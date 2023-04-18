@@ -718,8 +718,7 @@ module.exports = {
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
       "dark-wallpaper": "url('https://images.unsplash.com/photo-1498248529262-f5084e1d0d36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')",
-      "light-wallpaper": "url('https://images.unsplash.com/photo-1612005895561-3f5d51368ca9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80')",
-      "error-wallpaper": "url('@/assets/images/error.png')"
+      "light-wallpaper": "url('https://images.unsplash.com/photo-1612005895561-3f5d51368ca9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80')"
     },
     "backgroundOpacity": {
       "0": "0",
