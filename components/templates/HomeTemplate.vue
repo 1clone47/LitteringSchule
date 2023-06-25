@@ -19,6 +19,12 @@
         </p>
       </div>
     </div>
+    <div class="flex flex-col space-x-4 mx-2 py-8 xs:mx-2 border-4 rounded-md text-white border-white backdrop-blur-md items-center justify-center text-center mt-4">
+      <p class="xl:text-3xl xs:text-xs">Probiere gerne unser Quiz aus um herauszufinden zu wecher Kategorie von Verbraucher du gehörst</p>
+      <NuxtLink to="quiz">
+        <p class="xl:text-3xl xs:text-xs border-2 rounded-md p-2 mt-2 text-black bg-white shadow-3xl border-white">Zum Quiz</p>
+      </NuxtLink>
+    </div>
     <div class="flex snap-x snap-mandatory h-auto w-auto mx-2 overflow-scroll border-4 rounded-md border-white backdrop-blur-md mt-4">
       <div class="snap-start shrink-0 grid w-full place-items-center">
         <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg">
