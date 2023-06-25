@@ -1,6 +1,13 @@
 <template>
   <div class="bg-light-wallpaper dark:bg-dark-wallpaper bg-cover bg-fixed w-auto h-auto justify-center items-center scrollbar-hide py-4" id="home-container">
+    
     <div  class="text-center text-5xl font-sans border-2 mx-32 xs:mx-2 xs:text-2xl rounded-full font-semibold py-2 backdrop-blur-md text-white">Littering</div>
+    <div class="flex flex-col space-x-4 mx-2 py-8 xs:mx-2 border-4 rounded-md text-white border-white backdrop-blur-md items-center justify-center text-center mt-4">
+      <p class="xl:text-3xl xs:text-xs">Probiere unser Quiz aus um herauszufinden zu wecher Kategorie von Verbraucher du gehörst</p>
+      <NuxtLink to="quiz">
+        <p class="xl:text-3xl xs:text-xs border-2 rounded-md p-2 mt-2 text-black bg-white shadow-3xl border-white animate-pulse">Zum Quiz</p>
+      </NuxtLink>
+    </div>
     <div class="flex flex-row space-x-4 mx-2 py-8 xs:mx-2 border-4 rounded-md text-white border-white backdrop-blur-md items-center justify-center text-center mt-4">
       <div class="text-center justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32">
@@ -19,12 +26,7 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-col space-x-4 mx-2 py-8 xs:mx-2 border-4 rounded-md text-white border-white backdrop-blur-md items-center justify-center text-center mt-4">
-      <p class="xl:text-3xl xs:text-xs">Probiere gerne unser Quiz aus um herauszufinden zu wecher Kategorie von Verbraucher du gehörst</p>
-      <NuxtLink to="quiz">
-        <p class="xl:text-3xl xs:text-xs border-2 rounded-md p-2 mt-2 text-black bg-white shadow-3xl border-white">Zum Quiz</p>
-      </NuxtLink>
-    </div>
+    
     <div class="flex snap-x snap-mandatory h-auto w-auto mx-2 overflow-scroll border-4 rounded-md border-white backdrop-blur-md mt-4">
       <div class="snap-start shrink-0 grid w-full place-items-center">
         <img class="w-2/3 h-2/3 rounded-md" src="https://cdn.pixabay.com/photo/2016/11/21/15/42/disposal-1846033_1280.jpg">
