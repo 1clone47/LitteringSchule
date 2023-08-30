@@ -24,3 +24,8 @@
     @apply font-bold;
     @apply text-3xl;
 }
+
+.header-font {
+    @apply font-bold;
+    @apply text-3xl;
+}

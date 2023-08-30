@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-screen w-full bg-[#E7EBF0] dark:bg-[#062338]">
+  <div class="min-h-screen w-full bg-[#E7EBF0] dark:bg-[#062338]">
     <NuxtLayout />
   </div>
 </template>

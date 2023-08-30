@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <div class="w-full min-h-screen p-2 bg-[#E7EB2]">
+  <div class="w-full min-h-screen bg-[#E7EB2]">
     <NuxtPage />
   </div>
   <Footer />

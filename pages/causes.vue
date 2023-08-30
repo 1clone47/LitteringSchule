@@ -1,13 +1,7 @@
 <template>
-  <div class="flex flex-col items-center">
-    <p class="header">
-      Causes
-    </p>
-  </div>
+  <CausesTemplate />
 </template>
 
 <script setup>
-useSeoMeta({
-  title: 'Ursachen | Littering'
-})
+import CausesTemplate from '~/components/Causes/index.vue'
 </script>

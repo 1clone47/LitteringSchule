@@ -14,7 +14,7 @@
     <div :class="showMenuItems" class="inactive py-4 flex flex-col duration-500 transition-all space-y-3">
       <NuxtLink to="/" :class="showMenuContent" class="rounded-full px-32 text-center" @click="triggerMenu"><span :class="{'border-b-2 border-green-500 font-bold' : route.name === 'index'}" class="hover:font-bold">Home</span></NuxtLink>
       <NuxtLink to="quiz" :class="showMenuContent" class="rounded-full px-32 text-center" @click="triggerMenu"><span :class="{'border-b-2 border-green-500 font-bold' : route.name === 'quiz'}" class="hover:font-bold">Quiz</span></NuxtLink>
-      <NuxtLink to="causes" :class="showMenuContent" class="rounded-full px-32 text-center" @click="triggerMenu"><span :class="{'border-b-2 border-green-500 font-bold' : route.name === 'causes'}" class="hover:font-bold">Ursachen</span></NuxtLink>
+      <NuxtLink to="causes" :class="showMenuContent" class="rounded-full px-32 text-center" @click="triggerMenu"><span :class="{'border-b-2 border-green-500 font-bold' : route.name === 'Causes'}" class="hover:font-bold">Ursachen</span></NuxtLink>
       <NuxtLink to="consequences" :class="showMenuContent" class="rounded-full px-32 text-center" @click="triggerMenu"><span :class="{'border-b-2 border-green-500 font-bold' : route.name === 'consequences'}" class="hover:font-bold">Folgen</span></NuxtLink>
       <NuxtLink to="measures" :class="showMenuContent" class="rounded-full px-32 text-center" @click="triggerMenu"><span :class="{'border-b-2 border-green-500 font-bold' : route.name === 'measures'}" class="hover:font-bold">Maßnahmen</span></NuxtLink>
     </div>

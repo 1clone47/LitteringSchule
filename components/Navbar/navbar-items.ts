@@ -9,7 +9,7 @@ export const MENU = [
         url : '/quiz'
     },
     {
-        key : 'causes',
+        key : 'Causes',
         url : '/causes'
     },
     {

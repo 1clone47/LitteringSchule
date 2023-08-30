@@ -1,5 +1,6 @@
 <template>
-  <p class="header flex justify-center">
+<div class="py-24">
+  <p class="header-font flex justify-center">
     Was ist Littering?
   </p>
   <div class="flex flex-col mx-96 items-center space-y-4 justify-center mt-12 text-2xl font-mono">
@@ -26,9 +27,7 @@
       Es ist wichtig, dass jeder Verantwortung übernimmt und Müll ordnungsgemäß entsorgt, um Littering und seine negativen Auswirkungen auf unsere Umwelt zu reduzieren.
     </p>
   </div>
-  <div>
-
-  </div>
+</div>
 </template>
 
 <script setup>
