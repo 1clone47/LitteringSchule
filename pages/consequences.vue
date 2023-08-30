@@ -7,5 +7,7 @@
 </template>
 
 <script setup>
-
+useSeoMeta({
+  title: 'Folgen | Littering'
+})
 </script>
