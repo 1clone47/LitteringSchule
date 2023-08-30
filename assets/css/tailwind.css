@@ -19,7 +19,8 @@
     }
 }
 
-#website-container {
-    height: 100%;
-    width: 100%;
+.header {
+    @apply mt-20;
+    @apply font-bold;
+    @apply text-3xl;
 }

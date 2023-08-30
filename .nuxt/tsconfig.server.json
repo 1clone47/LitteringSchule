@@ -8,57 +8,63 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "D:/gitProjects/LitteringSchule/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "D:/gitProjects/LitteringSchule/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "D:/gitProjects/LitteringSchule"
+        "./.."
       ],
       "~/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "@": [
-        "D:/gitProjects/LitteringSchule"
+        "./.."
       ],
       "@/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "~~": [
-        "D:/gitProjects/LitteringSchule"
+        "./.."
       ],
       "~~/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "@@": [
-        "D:/gitProjects/LitteringSchule"
+        "./.."
       ],
       "@@/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "assets": [
-        "D:/gitProjects/LitteringSchule/assets"
+        "../assets"
       ],
       "assets/*": [
-        "D:/gitProjects/LitteringSchule/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "D:/gitProjects/LitteringSchule/public"
+        "../public"
       ],
       "public/*": [
-        "D:/gitProjects/LitteringSchule/public/*"
+        "../public/*"
       ]
     }
   },
   "include": [
-    "D:/gitProjects/LitteringSchule/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../dist"
   ]
 }

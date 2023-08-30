@@ -7,83 +7,84 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "D:/gitProjects/LitteringSchule",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "node"
-    ],
     "paths": {
       "~": [
-        "D:/gitProjects/LitteringSchule"
+        ".."
       ],
       "~/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "@": [
-        "D:/gitProjects/LitteringSchule"
+        ".."
       ],
       "@/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "~~": [
-        "D:/gitProjects/LitteringSchule"
+        ".."
       ],
       "~~/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "@@": [
-        "D:/gitProjects/LitteringSchule"
+        ".."
       ],
       "@@/*": [
-        "D:/gitProjects/LitteringSchule/*"
+        "../*"
       ],
       "assets": [
-        "D:/gitProjects/LitteringSchule/assets"
+        "../assets"
       ],
       "assets/*": [
-        "D:/gitProjects/LitteringSchule/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "D:/gitProjects/LitteringSchule/public"
+        "../public"
       ],
       "public/*": [
-        "D:/gitProjects/LitteringSchule/public/*"
+        "../public/*"
       ],
       "#app": [
-        "D:/gitProjects/LitteringSchule/node_modules/nuxt/dist/app"
+        "../node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "D:/gitProjects/LitteringSchule/node_modules/nuxt/dist/app/*"
+        "../node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "D:/gitProjects/LitteringSchule/node_modules/nuxt/dist/app/compat/vue-demi"
+        "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#vue-router": [
-        "D:/gitProjects/LitteringSchule/.nuxt/vue-router"
+        "./vue-router"
       ],
       "#imports": [
-        "D:/gitProjects/LitteringSchule/.nuxt/imports"
+        "./imports"
       ],
       "#build": [
-        "D:/gitProjects/LitteringSchule/.nuxt"
+        "."
       ],
       "#build/*": [
-        "D:/gitProjects/LitteringSchule/.nuxt/*"
+        "./*"
       ],
       "#components": [
-        "D:/gitProjects/LitteringSchule/.nuxt/components"
+        "./components"
       ]
     }
   },
   "include": [
     "./nuxt.d.ts",
-    "../**/*"
+    "../**/*",
+    ".."
   ],
   "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
     "../dist",
     "../.output"
   ]

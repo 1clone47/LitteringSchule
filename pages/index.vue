@@ -1,17 +1,7 @@
 <template>
-    <div>
-        <NavBar />
-        <Home />
-        <FooterBar />
-    </div>
-    
+  <HomeTemplate />
 </template>
 
 <script setup>
-import Home from '@/components/templates/HomeTemplate.vue'
-
-useSeoMeta({
-    title: 'Home | Littering'
-})
+import HomeTemplate from '~/components/Home/index.vue'
 </script>
-
