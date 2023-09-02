@@ -1,13 +1,7 @@
 <template>
-  <div class="flex flex-col items-center">
-    <p class="header">
-      Consequences
-    </p>
-  </div>
+  <ConsequencesTemplate />
 </template>
 
 <script setup>
-useSeoMeta({
-  title: 'Folgen | Littering'
-})
+import ConsequencesTemplate from '~/components/Consequences/index.vue'
 </script>

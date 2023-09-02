@@ -1,6 +1,6 @@
 
 import { updateAppConfig } from '#app'
-import { defuFn } from 'D:/gitProjects/LitteringSchule/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/Users/andy/code/web/LitteringSchule/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
