@@ -1,13 +1,7 @@
 <template>
-  <div class="flex flex-col items-center">
-    <p class="header">
-      Measures
-    </p>
-  </div>
+  <MeasuresTemplate />
 </template>
 
 <script setup>
-useSeoMeta({
-  title: 'Maßnahmen | Littering'
-})
+import MeasuresTemplate from "~/components/Measures/index.vue";
 </script>
