@@ -1,13 +1,7 @@
 <template>
-  <div class="flex flex-col items-center">
-    <p class="header">
-      Quiz
-    </p>
-  </div>
+  <QuizTemplate />
 </template>
 
 <script setup>
-useSeoMeta({
-  title: 'Quiz | Littering'
-})
+import QuizTemplate from '~/components/Quiz/index.vue'
 </script>
