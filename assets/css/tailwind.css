@@ -32,12 +32,9 @@
 
 .button {
     @apply border-2;
-    @apply border-white;
     @apply rounded-lg;
-    @apply p-4;
-    @apply bg-white;
-    @apply shadow-lg;
-    @apply font-mono;
+    @apply p-8 shadow-lg;
+    @apply font-mono text-lg;
     @apply mx-8;
     @apply w-full;
     @apply flex flex-row;
