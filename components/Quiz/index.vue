@@ -45,6 +45,44 @@
         </div>
       </div>
     </div>
+    <div v-else class="select-none flex flex-col items-center justify-center xl:mx-80 lg:mx-60 font-mono text-2xl">
+      <div v-if="points >= 10" class="flex flex-col items-center">
+        <p class="mb-4">
+          ~ Allstar ~
+        </p>
+        <a href="https://giphy.com/gifs/animation-loop-pastoral-3o6ZtiWdaoag4JnMUo" target="_blank" class="text-sm mb-2 hover:underline">
+          Credit to: @jasonclarke on Giphy.com
+        </a>
+        <img src="https://media.giphy.com/media/3o6ZtiWdaoag4JnMUo/giphy.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+      <div v-else-if="points >= 7" class="flex flex-col items-center">
+        <p class="mb-4">
+          ~ Allrounder ~
+        </p>
+        <a href="https://giphy.com/gifs/animation-loop-cartoon-3o7TKIyZgIr2SMOyEo" target="_blank" class="text-sm mb-2 hover:underline">
+          Credit to: @jasonclarke on Giphy.com
+        </a>
+        <img src="https://media.giphy.com/media/3o7TKIyZgIr2SMOyEo/giphy.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+      <div v-else-if="points >= 4" class="flex flex-col items-center">
+        <p class="mb-4">
+          ~ Durschnittlicher Vermüller ~
+        </p>
+        <a href="https://giphy.com/gifs/ugly-patlap-pat-lap-0LYFyMMIg292GYIOSN?utm_source=media-link&utm_medium=landing&utm_campaign=Media%20Links&utm_term=" target="_blank" class="text-sm mb-2 hover:underline">
+          Credit to: @patlapofficial
+        </a>
+        <img src="https://media.giphy.com/media/0LYFyMMIg292GYIOSN/giphy-downsized-large.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+      <div v-else class="flex flex-col items-center">
+        <p class="mb-4">
+          ~ Saubär ~
+        </p>
+        <a href="https://giphy.com/gifs/beastieboys-beastie-boys-triple-trouble-MaOzIpgonH8WsNr1gC" target="_blank" class="text-sm mb-2 hover:underline">
+          Credit to: @beastieboys on Giphy.com
+        </a>
+        <img src="https://media.giphy.com/media/MaOzIpgonH8WsNr1gC/giphy.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+    </div>
     <p v-if="!showResult" class="font-mono mt-4">~ Frage {{ currentQuestion }} / 10 ~</p>
     <p v-else class="font-mono mt-4">~ Ergebnis ~</p>
   </div>
@@ -60,10 +98,10 @@ useSeoMeta({
 })
 
 const showSolution = ref(false)
-const points = ref(0)
+const points = ref(10)
 const shownQuestion = ref(1)
 const currentQuestion = ref(1)
-const showResult = ref(false)
+const showResult = ref(true)
 
 const resolveInput = (value, correctAnswer) => {
   showSolution.value = true
