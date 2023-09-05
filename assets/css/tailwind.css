@@ -34,8 +34,7 @@
     @apply border-2;
     @apply rounded-lg;
     @apply p-8 shadow-lg;
-    @apply font-mono text-lg;
+    @apply font-mono 2xl:text-lg xl:text-base;
     @apply mx-8;
-    @apply w-full;
     @apply flex flex-row;
 }

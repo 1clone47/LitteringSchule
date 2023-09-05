@@ -3,17 +3,17 @@
     <p class="header-font">
       Unser Quiz
     </p>
-    <p class="text-2xl font-mono xl:mx-80 lg:mx-60 mt-12 mb-24">
+    <p class="text-2xl font-mono xl:mx-80 lg:mx-60 mt-12 mb-6">
       Beantworte alle Fragen um herauszufinden zu was wie einer Sorte von Verbraucher Sie gehören
     </p>
     <div v-if="!showResult" v-for="question in QUESTIONS" class="select-none">
       <div v-if="shownQuestion === question.id" class="flex flex-col items-center justify-center xl:mx-80 lg:mx-60 space-y-4 space-x-4">
         <p class="text-3xl font-mono mb-4">{{ question.title }}</p>
-        <div class="flex flex-col space-y-4 w-[1500px]">
+        <div class="flex flex-col space-y-4 2xl:w-[1500px] xl:w-[750px]">
           <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'A', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'A', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('A', question.rightAnswer)">
             <CheckIcon v-if="showSolution && question.rightAnswer === 'A'" class="w-6 h-6" />
             <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'A'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6" />
+            <MinusIcon v-else class="w-6 h-6 text-white" />
             <p class="flex-1 flex items-center justify-center">
               {{ question.questionA }}
             </p>
@@ -21,7 +21,7 @@
           <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'B', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'B', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('B', question.rightAnswer)">
             <CheckIcon v-if="showSolution && question.rightAnswer === 'B'" class="w-6 h-6" />
             <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'B'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6" />
+            <MinusIcon v-else class="w-6 h-6 text-white" />
             <p class="flex-1 flex items-center justify-center">
               {{ question.questionB }}
             </p>
@@ -29,7 +29,7 @@
           <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'C', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'C', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('C', question.rightAnswer)">
             <CheckIcon v-if="showSolution && question.rightAnswer === 'C'" class="w-6 h-6" />
             <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'C'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6" />
+            <MinusIcon v-else class="w-6 h-6 text-white" />
             <p class="flex-1 flex items-center justify-center">
               {{ question.questionC }}
             </p>
@@ -37,7 +37,7 @@
           <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'D', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'D', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('D', question.rightAnswer)">
             <CheckIcon v-if="showSolution && question.rightAnswer === 'D'" class="w-6 h-6" />
             <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'D'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6" />
+            <MinusIcon v-else class="w-6 h-6 text-white" />
             <p class="flex-1 flex items-center justify-center">
               {{ question.questionD }}
             </p>
@@ -46,6 +46,7 @@
       </div>
     </div>
     <div v-else class="select-none flex flex-col items-center justify-center xl:mx-80 lg:mx-60 font-mono text-2xl">
+      <button class="mb-6 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" @click="restartQuiz">Nochmal</button>
       <div v-if="points >= 10" class="flex flex-col items-center">
         <p class="mb-4">
           ~ Allstar ~
@@ -98,10 +99,10 @@ useSeoMeta({
 })
 
 const showSolution = ref(false)
-const points = ref(10)
+const points = ref(0)
 const shownQuestion = ref(1)
 const currentQuestion = ref(1)
-const showResult = ref(true)
+const showResult = ref(false)
 
 const resolveInput = (value, correctAnswer) => {
   showSolution.value = true
@@ -118,5 +119,12 @@ const nextQuestion = () => {
   if (currentQuestion.value > 10) {
     showResult.value = true
   }
+}
+
+const restartQuiz = () => {
+  showResult.value = false
+  points.value = 0
+  currentQuestion.value = 1
+  shownQuestion.value = 1
 }
 </script>
