@@ -3,16 +3,14 @@
   <p class="header-font flex justify-center">
     Was ist Littering?
   </p>
-  <div class="flex flex-col mx-80 items-center space-y-4 justify-center mt-12 text-2xl font-mono">
-    <p>Probiere das Quiz aus um herauszufinden was wie ein Verbraucher Sie sind.</p>
-    <button class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+  <div class="flex flex-col 2xl:mx-80 xl:mx-40 items-center space-y-4 justify-center mt-12 text-2xl font-mono">
+    <p>~ Probiere das Quiz aus um herauszufinden, zu welcher Kategorie Sie gehoeren ~</p>
+    <NuxtLink to="/quiz" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
       <ArrowRightOnRectangleIcon class="w-8 h-8" />
-    </button>
+    </NuxtLink>
   </div>
-  <div class="flex flex-col items-center mt-12 mx-80">
-    <div>
-      <GlobeEuropeAfricaIcon class="xl:w-[400px] xl:h-[400px]" />
-    </div>
+  <div class="flex flex-col items-center mt-12 2xl:mx-80 xl:mx-40">
+    <img src="~/assets/images/home-image.jpg" class="rounded-lg shadow-2xl mb-2 xl:w-full xl:h-[450px]" alt="">
     <p class="flex-1 mt-4 flex items-center xl:text-2xl lg:text-sm font-mono">
       Littering bezieht sich auf das unachtsame Wegwerfen von Abfall oder Müll auf öffentlichen Plätzen oder in der Natur.
       <br />

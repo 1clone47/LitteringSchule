@@ -3,11 +3,11 @@
     <p class="header-font">
       Unser Quiz
     </p>
-    <p class="text-2xl font-mono xl:mx-80 lg:mx-60 mt-12 mb-6">
+    <p class="text-2xl font-mono 2xl:mx-80 xl:mx-40 mt-12 mb-6">
       Beantworte alle Fragen um herauszufinden zu was wie einer Sorte von Verbraucher Sie gehören
     </p>
     <div v-if="!showResult" v-for="question in QUESTIONS" class="select-none">
-      <div v-if="shownQuestion === question.id" class="flex flex-col items-center justify-center xl:mx-80 lg:mx-60 space-y-4 space-x-4">
+      <div v-if="shownQuestion === question.id" class="flex flex-col items-center justify-center 2xl:mx-80 xl:mx-40 space-y-4 space-x-4">
         <p class="text-3xl font-mono mb-4">{{ question.title }}</p>
         <div class="flex flex-col space-y-4 2xl:w-[1500px] xl:w-[750px]">
           <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'A', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'A', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('A', question.rightAnswer)">
