@@ -1,23 +1,23 @@
 export const MENU = [
     {
-        key : 'home',
+        key : 'Start',
         url : '/'
     },
 
     {
-        key : 'quiz',
+        key : 'Quiz',
         url : '/quiz'
     },
     {
-        key : 'Causes',
+        key : 'Ursachen',
         url : '/causes'
     },
     {
-        key : 'consequences',
+        key : 'Folgen',
         url : '/consequences'
     },
     {
-        key : 'measures',
+        key : 'Maßnahmen',
         url : '/measures'
     }
 ]
