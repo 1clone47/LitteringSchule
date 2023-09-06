@@ -1,33 +1,26 @@
 <template>
-  <div class="py-24">
-    <p class="header-font flex justify-center">
-      Was ist Littering?
+  <div class="flex flex-col items-center bg-[#E7EBF0] py-24">
+    <p class="header-font">
+      Was sind die Ursachen?
     </p>
-    <div class="flex flex-col 2xl:mx-80 xl:mx-40 items-center space-y-4 justify-center mt-12 text-2xl font-mono">
-      <p>~ Probiere das Quiz aus um herauszufinden, zu welcher Kategorie Sie gehoeren ~</p>
-      <NuxtLink to="/quiz" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-        <ArrowRightOnRectangleIcon class="w-8 h-8" />
-      </NuxtLink>
-    </div>
-    <div class="flex flex-col items-center mt-12 2xl:mx-80 xl:mx-40">
-      <img src="~/assets/images/home-image.jpg" class="rounded-lg shadow-2xl mb-2 xl:w-full xl:h-[450px]" alt="">
-      <p class="flex-1 mt-4 flex items-center xl:text-2xl lg:text-sm font-mono">
-        Littering bezieht sich auf das unachtsame Wegwerfen von Abfall oder Müll auf öffentlichen Plätzen oder in der Natur.
-        <br />
-        Dies kann zum Beispiel Zigarettenstummel, Plastikflaschen, Papierverpackungen oder Essensreste umfassen.
-        <br />
-        Littering ist ein weit verbreitetes Problem in vielen Städten und Gemeinden, da es nicht nur unansehnlich ist, sondern auch Umweltprobleme verursacht.
-        <br />
-        Wenn Abfälle auf öffentlichen Plätzen liegen gelassen werden, können sie zum Beispiel in Flüsse und Ozeane gelangen, wo sie die Tierwelt und die Umwelt schädigen können.
-        <br />
-        Littering ist auch eine Form von Umweltverschmutzung und kann dazu beitragen, dass sich Krankheiten und Infektionen ausbreiten, wenn Abfall in der Nähe von Wohngebieten oder öffentlichen Einrichtungen aufbewahrt wird.
-        <br />
-        Es ist wichtig, dass jeder Verantwortung übernimmt und Müll ordnungsgemäß entsorgt, um Littering und seine negativen Auswirkungen auf unsere Umwelt zu reduzieren.
-      </p>
+    <p class="text-2xl font-mono 2xl:mx-80 xl:mx-40 mt-12">
+      Die Bekämpfung von Littering erfordert eine umfassende Herangehensweise, die Bildung, Bewusstseinsbildung, angemessene Infrastruktur, rechtliche Durchsetzung und kulturelle Veränderungen umfasst. Nur wenn diese Ursachen angegangen werden, kann eine langfristige Verringerung von Littering erreicht werden.
+    </p>
+    <div v-for="reason in REASONS" class="flex lg:flex-col xl:flex-row items-center justify-center 2xl:mx-80 xl:mx-40 space-y-4 space-x-4 mt-12">
+      <img :src="reason.image" alt="" class="lg:w-full xl:w-[450px] h-[450px] rounded-lg shadow-2xl ">
+      <div class="flex flex-col items-center justify-center py-4">
+        <p class="text-xl font-semibold">{{ reason.title }}</p>
+        <p class="text-lg font-mono mt-2">{{ reason.content }}</p>
+      </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
-import { GlobeEuropeAfricaIcon, ArrowRightOnRectangleIcon } from "@heroicons/vue/24/solid";
+import { REASONS } from "~/components/Causes/causes-items"
+
+useSeoMeta({
+  title: 'Ursachen | Littering'
+})
 </script>
