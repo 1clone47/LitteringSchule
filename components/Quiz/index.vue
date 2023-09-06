@@ -1,130 +1,35 @@
 <template>
-  <div class="flex flex-col items-center bg-[#E7EBF0] py-24">
-    <p class="header-font">
+  <div class="py-24 px-8 lg:px-32 xl:px-64 flex flex-col items-center">
+    <p class="font-bold text-3xl">
       Unser Quiz
     </p>
-    <p class="text-2xl font-mono 2xl:mx-80 xl:mx-40 mt-12 mb-6">
-      Beantworte alle Fragen um herauszufinden zu was wie einer Sorte von Verbraucher Sie gehören
+    <p class="mt-4 mb-4 font-mono text-lg lg:text-xl lg:mb-8 lg:mt-8">
+      ~ Beantworte alle Fragen um herauszufinden, zu welcher Sorte Sie gehören ~
     </p>
-    <div v-if="!showResult" v-for="question in QUESTIONS" class="select-none">
-      <div v-if="shownQuestion === question.id" class="flex flex-col items-center justify-center 2xl:mx-80 xl:mx-40 space-y-4 space-x-4">
-        <p class="text-3xl font-mono mb-4">{{ question.title }}</p>
-        <div class="flex flex-col space-y-4 2xl:w-[1500px] xl:w-[750px]">
-          <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'A', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'A', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('A', question.rightAnswer)">
-            <CheckIcon v-if="showSolution && question.rightAnswer === 'A'" class="w-6 h-6" />
-            <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'A'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6 text-white" />
-            <p class="flex-1 flex items-center justify-center">
-              {{ question.questionA }}
-            </p>
-          </div>
-          <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'B', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'B', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('B', question.rightAnswer)">
-            <CheckIcon v-if="showSolution && question.rightAnswer === 'B'" class="w-6 h-6" />
-            <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'B'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6 text-white" />
-            <p class="flex-1 flex items-center justify-center">
-              {{ question.questionB }}
-            </p>
-          </div>
-          <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'C', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'C', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('C', question.rightAnswer)">
-            <CheckIcon v-if="showSolution && question.rightAnswer === 'C'" class="w-6 h-6" />
-            <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'C'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6 text-white" />
-            <p class="flex-1 flex items-center justify-center">
-              {{ question.questionC }}
-            </p>
-          </div>
-          <div class="button items-center" :class="{ 'bg-green-500 border-green-500' : showSolution && question.rightAnswer === 'D', 'bg-red-500 border-red-500' : showSolution && question.rightAnswer !== 'D', 'bg-white border-white shadow-lg' : !showSolution }" @click="resolveInput('D', question.rightAnswer)">
-            <CheckIcon v-if="showSolution && question.rightAnswer === 'D'" class="w-6 h-6" />
-            <XMarkIcon v-else-if="showSolution && question.rightAnswer !== 'D'" class="w-6 h-6" />
-            <MinusIcon v-else class="w-6 h-6 text-white" />
-            <p class="flex-1 flex items-center justify-center">
-              {{ question.questionD }}
-            </p>
-          </div>
-        </div>
+    <!-- QUIZ -->
+    <div v-for="question in QUESTIONS" class="w-full">
+      <div v-if="" class="flex flex-col items-center w-full">
+        <p class="mb-4 text-xl font-mono">{{ question.title }}</p>
+        <!-- ANSWER BUTTONS  -->
+        <ul class="flex flex-col items-center space-y-2 w-full">
+          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center">
+            {{ question.questionA }}
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center">
+            {{ question.questionB }}
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center">
+            {{ question.questionC }}
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center">
+            {{ question.questionD }}
+          </li>
+        </ul>
       </div>
     </div>
-    <div v-else class="select-none flex flex-col items-center justify-center xl:mx-80 lg:mx-60 font-mono text-2xl">
-      <button class="mb-6 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" @click="restartQuiz">Nochmal</button>
-      <div v-if="points >= 10" class="flex flex-col items-center">
-        <p class="mb-4">
-          ~ Allstar ~
-        </p>
-        <a href="https://giphy.com/gifs/animation-loop-pastoral-3o6ZtiWdaoag4JnMUo" target="_blank" class="text-sm mb-2 hover:underline">
-          Credit to: @jasonclarke on Giphy.com
-        </a>
-        <img src="https://media.giphy.com/media/3o6ZtiWdaoag4JnMUo/giphy.gif" class="rounded-lg shadow-xl" alt="">
-      </div>
-      <div v-else-if="points >= 7" class="flex flex-col items-center">
-        <p class="mb-4">
-          ~ Allrounder ~
-        </p>
-        <a href="https://giphy.com/gifs/animation-loop-cartoon-3o7TKIyZgIr2SMOyEo" target="_blank" class="text-sm mb-2 hover:underline">
-          Credit to: @jasonclarke on Giphy.com
-        </a>
-        <img src="https://media.giphy.com/media/3o7TKIyZgIr2SMOyEo/giphy.gif" class="rounded-lg shadow-xl" alt="">
-      </div>
-      <div v-else-if="points >= 4" class="flex flex-col items-center">
-        <p class="mb-4">
-          ~ Durschnittlicher Vermüller ~
-        </p>
-        <a href="https://giphy.com/gifs/ugly-patlap-pat-lap-0LYFyMMIg292GYIOSN?utm_source=media-link&utm_medium=landing&utm_campaign=Media%20Links&utm_term=" target="_blank" class="text-sm mb-2 hover:underline">
-          Credit to: @patlapofficial
-        </a>
-        <img src="https://media.giphy.com/media/0LYFyMMIg292GYIOSN/giphy-downsized-large.gif" class="rounded-lg shadow-xl" alt="">
-      </div>
-      <div v-else class="flex flex-col items-center">
-        <p class="mb-4">
-          ~ Saubär ~
-        </p>
-        <a href="https://giphy.com/gifs/beastieboys-beastie-boys-triple-trouble-MaOzIpgonH8WsNr1gC" target="_blank" class="text-sm mb-2 hover:underline">
-          Credit to: @beastieboys on Giphy.com
-        </a>
-        <img src="https://media.giphy.com/media/MaOzIpgonH8WsNr1gC/giphy.gif" class="rounded-lg shadow-xl" alt="">
-      </div>
-    </div>
-    <p v-if="!showResult" class="font-mono mt-4">~ Frage {{ currentQuestion }} / 10 ~</p>
-    <p v-else class="font-mono mt-4">~ Ergebnis ~</p>
   </div>
-
 </template>
 
 <script setup>
 import { QUESTIONS } from "~/components/Quiz/quiz-items"
-import { CheckIcon, XMarkIcon, MinusIcon } from "@heroicons/vue/24/solid"
-
-useSeoMeta({
-  title: 'Quiz | Littering'
-})
-
-const showSolution = ref(false)
-const points = ref(0)
-const shownQuestion = ref(1)
-const currentQuestion = ref(1)
-const showResult = ref(false)
-
-const resolveInput = (value, correctAnswer) => {
-  showSolution.value = true
-  if (value === correctAnswer) {
-    points.value += 1
-  }
-  setTimeout(nextQuestion, 1000)
-}
-
-const nextQuestion = () => {
-  currentQuestion.value += 1
-  showSolution.value = false
-  shownQuestion.value += 1
-  if (currentQuestion.value > 10) {
-    showResult.value = true
-  }
-}
-
-const restartQuiz = () => {
-  showResult.value = false
-  points.value = 0
-  currentQuestion.value = 1
-  shownQuestion.value = 1
-}
 </script>
