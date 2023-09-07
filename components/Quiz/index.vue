@@ -7,7 +7,28 @@
       ~ Beantworte alle Fragen um herauszufinden, zu welcher Sorte Sie gehören ~
     </p>
     <!-- QUIZ OR RESULT -->
-    <div v-if="showResult" class="w-full select-none flex flex-col items-center">
+    <div v-if="!showResult" v-for="question in QUESTIONS" class="w-full select-none">
+      <div v-if="currentQuestion === question.id" class="flex flex-col items-center w-full">
+        <p class="mb-4 text-xl font-mono">{{ question.title }}</p>
+        <!-- ANSWER BUTTONS  -->
+        <ul class="flex flex-col items-center space-y-2 w-full">
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'A', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'A', 'bg-white': !showAnswer}" @click="checkInput('A', question.rightAnswer)">
+            {{ question.questionA }}
+          </li>
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'B', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'B', 'bg-white': !showAnswer}" @click="checkInput('B', question.rightAnswer)">
+            {{ question.questionB }}
+          </li>
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'C', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'C', 'bg-white': !showAnswer}" @click="checkInput('C', question.rightAnswer)">
+            {{ question.questionC }}
+          </li>
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'D', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'D', 'bg-white': !showAnswer}" @click="checkInput('D', question.rightAnswer)">
+            {{ question.questionD }}
+          </li>
+        </ul>
+        <p class="font-mono mt-4">~ Frage {{ currentQuestion }} / 10 ~</p>
+      </div>
+    </div>
+    <div v-else class="w-full select-none flex flex-col items-center">
       <div v-if="points >= 10" class="flex-1 flex flex-col items-center">
         <p class="text-lg font-mono">Du bist ein</p>
         <p class="text-2xl font-mono">~ Allstar ~</p>
@@ -41,26 +62,6 @@
         <img src="https://media.giphy.com/media/MaOzIpgonH8WsNr1gC/giphy.gif" class="rounded-lg shadow-xl" alt="">
       </div>
     </div>
-    <div v-else v-for="question in QUESTIONS" class="w-full select-none">
-      <div v-if="currentQuestion === question.id" class="flex flex-col items-center w-full">
-        <p class="mb-4 text-xl font-mono">{{ question.title }}</p>
-        <!-- ANSWER BUTTONS  -->
-        <ul class="flex flex-col items-center space-y-2 w-full">
-          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'A', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'A', 'bg-white': !showAnswer}" @click="checkInput('A', question.rightAnswer)">
-            {{ question.questionA }}
-          </li>
-          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'B', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'B', 'bg-white': !showAnswer}" @click="checkInput('B', question.rightAnswer)">
-            {{ question.questionB }}
-          </li>
-          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'C', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'C', 'bg-white': !showAnswer}" @click="checkInput('C', question.rightAnswer)">
-            {{ question.questionC }}
-          </li>
-          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'D', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'D', 'bg-white': !showAnswer}" @click="checkInput('D', question.rightAnswer)">
-            {{ question.questionD }}
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -70,21 +71,21 @@ import { QUESTIONS } from "~/components/Quiz/quiz-items"
 const currentQuestion = ref(1)
 const points = ref(0)
 const showAnswer = ref(false)
-const showResult = ref(true)
+const showResult = ref(false)
 
 const checkInput = (input, correctAnswer) => {
   showAnswer.value = true
   if (input === correctAnswer) {
     points.value += 1
   }
-  setTimeout(nextQuestion, 3000)
+  setTimeout(nextQuestion, 2000)
 }
 
 const nextQuestion = () => {
-  if (points.value >= 10) {
+  currentQuestion.value += 1
+  if (currentQuestion.value > 10) {
     showResult.value = true
   }
   showAnswer.value = false
-  currentQuestion.value += 1
 }
 </script>
