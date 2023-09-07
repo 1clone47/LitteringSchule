@@ -1,7 +1,7 @@
-import { ComputedRef, Ref } from 'vue'
-export type LayoutKey = string
-declare module "D:/gitProjects/LitteringSchule/node_modules/nuxt/dist/pages/runtime/composables" {
+import { ComputedRef, MaybeRef } from 'vue'
+export type LayoutKey = "default"
+declare module "../../node_modules/nuxt/dist/pages/runtime/composables" {
   interface PageMeta {
-    layout?: false | LayoutKey | Ref<LayoutKey> | ComputedRef<LayoutKey>
+    layout?: MaybeRef<LayoutKey | false> | ComputedRef<LayoutKey | false>
   }
 }

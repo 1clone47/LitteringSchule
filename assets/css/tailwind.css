@@ -19,7 +19,22 @@
     }
 }
 
-#website-container {
-    height: 100%;
-    width: 100%;
+.header {
+    @apply mt-20;
+    @apply font-bold;
+    @apply text-3xl;
+}
+
+.header-font {
+    @apply font-bold;
+    @apply text-3xl;
+}
+
+.button {
+    @apply border-2;
+    @apply rounded-lg;
+    @apply p-8 shadow-lg;
+    @apply font-mono 2xl:text-lg xl:text-base;
+    @apply mx-8;
+    @apply flex flex-row;
 }
