@@ -6,8 +6,42 @@
     <p class="mt-4 mb-8 font-mono text-lg lg:text-xl lg:mb-12 lg:mt-8">
       ~ Beantworte alle Fragen um herauszufinden, zu welcher Sorte Sie gehören ~
     </p>
-    <!-- QUIZ -->
-    <div v-for="question in QUESTIONS" class="w-full select-none">
+    <!-- QUIZ OR RESULT -->
+    <div v-if="showResult" class="w-full select-none flex flex-col items-center">
+      <div v-if="points >= 10" class="flex-1 flex flex-col items-center">
+        <p class="text-lg font-mono">Du bist ein</p>
+        <p class="text-2xl font-mono">~ Allstar ~</p>
+        <a href="https://giphy.com/gifs/animation-loop-pastoral-3o6ZtiWdaoag4JnMUo" target="_blank" class="text-sm font-mono mt-2 mb-2 hover:underline">
+          Credit to: @jasonclarke on Giphy.com
+        </a>
+        <img src="https://media.giphy.com/media/3o6ZtiWdaoag4JnMUo/giphy.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+      <div v-else-if="points > 7" class="flex-1 flex flex-col items-center">
+        <p class="text-lg font-mono">Du bist ein</p>
+        <p class="text-2xl font-mono">~ Allrounder ~</p>
+        <a href="https://giphy.com/gifs/animation-loop-cartoon-3o7TKIyZgIr2SMOyEo" target="_blank" class="text-sm font-mono mt-2 mb-2 hover:underline">
+          Credit to: @jasonclarke on Giphy.com
+        </a>
+        <img src="https://media.giphy.com/media/3o7TKIyZgIr2SMOyEo/giphy.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+      <div v-else-if="points > 4" class="flex-1 flex flex-col items-center">
+        <p class="text-lg font-mono">Du bist der</p>
+        <p class="text-2xl font-mono">~ Durchschnitt ~</p>
+        <a href="https://giphy.com/gifs/ugly-patlap-pat-lap-0LYFyMMIg292GYIOSN?utm_source=media-link&utm_medium=landing&utm_campaign=Media%20Links&utm_term=" target="_blank" class="text-sm font-mono mt-2 mb-2 hover:underline">
+          Credit to: @patlapofficial
+        </a>
+        <img src="https://media.giphy.com/media/0LYFyMMIg292GYIOSN/giphy-downsized-large.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+      <div v-else class="flex-1 flex flex-col items-center">
+        <p class="text-lg font-mono">Du bist ein</p>
+        <p class="text-2xl font-mono">~ Saubär ~</p>
+        <a href="https://giphy.com/gifs/beastieboys-beastie-boys-triple-trouble-MaOzIpgonH8WsNr1gC" target="_blank" class="text-sm font-mono mt-2 mb-2 hover:underline">
+          Credit to: @beastieboys on Giphy.com
+        </a>
+        <img src="https://media.giphy.com/media/MaOzIpgonH8WsNr1gC/giphy.gif" class="rounded-lg shadow-xl" alt="">
+      </div>
+    </div>
+    <div v-else v-for="question in QUESTIONS" class="w-full select-none">
       <div v-if="currentQuestion === question.id" class="flex flex-col items-center w-full">
         <p class="mb-4 text-xl font-mono">{{ question.title }}</p>
         <!-- ANSWER BUTTONS  -->
@@ -36,6 +70,7 @@ import { QUESTIONS } from "~/components/Quiz/quiz-items"
 const currentQuestion = ref(1)
 const points = ref(0)
 const showAnswer = ref(false)
+const showResult = ref(true)
 
 const checkInput = (input, correctAnswer) => {
   showAnswer.value = true
@@ -46,6 +81,9 @@ const checkInput = (input, correctAnswer) => {
 }
 
 const nextQuestion = () => {
+  if (points.value >= 10) {
+    showResult.value = true
+  }
   showAnswer.value = false
   currentQuestion.value += 1
 }
