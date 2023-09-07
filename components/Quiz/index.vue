@@ -7,7 +7,7 @@
       ~ Beantworte alle Fragen um herauszufinden, zu welcher Sorte Sie gehören ~
     </p>
     <!-- QUIZ -->
-    <div v-for="question in QUESTIONS" class="w-full">
+    <div v-for="question in QUESTIONS" class="w-full select-none">
       <div v-if="currentQuestion === question.id" class="flex flex-col items-center w-full">
         <p class="mb-4 text-xl font-mono">{{ question.title }}</p>
         <!-- ANSWER BUTTONS  -->
@@ -15,13 +15,13 @@
           <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'A', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'A', 'bg-white': !showAnswer}" @click="checkInput('A', question.rightAnswer)">
             {{ question.questionA }}
           </li>
-          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'B', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'B', 'bg-white': !showAnswer}" @click="checkInput('B', question.rightAnswer)">
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'B', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'B', 'bg-white': !showAnswer}" @click="checkInput('B', question.rightAnswer)">
             {{ question.questionB }}
           </li>
-          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'C', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'C', 'bg-white': !showAnswer}" @click="checkInput('C', question.rightAnswer)">
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'C', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'C', 'bg-white': !showAnswer}" @click="checkInput('C', question.rightAnswer)">
             {{ question.questionC }}
           </li>
-          <li class="bg-white p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'D', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'D', 'bg-white': !showAnswer}" @click="checkInput('D', question.rightAnswer)">
+          <li class="p-4 rounded-lg shadow-lg w-full flex justify-center" :class="{'bg-green-700 text-white': showAnswer && question.rightAnswer === 'D', 'bg-red-700 text-white': showAnswer && question.rightAnswer !== 'D', 'bg-white': !showAnswer}" @click="checkInput('D', question.rightAnswer)">
             {{ question.questionD }}
           </li>
         </ul>
