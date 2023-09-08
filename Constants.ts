@@ -2,5 +2,5 @@ const date = new Date()
 
 export const APP = {
     year: date.getFullYear(),
-    version : 'v2.1.2',
+    version : 'v2.1.3',
 }
