@@ -4,7 +4,7 @@
       Unser Quiz
     </p>
     <p class="mt-4 mb-8 font-mono text-lg lg:text-xl lg:mb-12 lg:mt-8">
-      ~ Beantworte alle Fragen um herauszufinden, zu welcher Sorte Sie gehören ~
+      ~ Beantworte alle Fragen um herauszufinden, zu welcher Kategorie Du gehörst ~
     </p>
     <!-- QUIZ OR RESULT -->
     <div v-if="!showResult" v-for="question in QUESTIONS" class="w-full select-none">
