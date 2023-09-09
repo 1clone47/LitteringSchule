@@ -7,7 +7,7 @@
       ~ Probier unser Quiz aus ~
     </label>
     <NuxtLink to="/quiz" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-      <ArrowRightOnRectangleIcon class="w-8 h-8" />
+      START
     </NuxtLink>
     <div class="flex flex-col lg:flex-row mt-4 lg:mt-8">
       <div class="flex-1 flex items-center">
