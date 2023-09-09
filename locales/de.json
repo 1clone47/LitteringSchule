@@ -1,0 +1,9 @@
+{
+  "navbar" : {
+    "home" : "Start",
+    "quiz" : "Quiz",
+    "causes" : "Ursachen",
+    "consequences" : "Konsequenzen",
+    "measures" : "Maßnahmen"
+  }
+}
