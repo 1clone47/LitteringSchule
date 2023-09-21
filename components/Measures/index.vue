@@ -6,14 +6,14 @@
     <p class="mt-4 mb-4 font-mono">
       Die erfolgreiche Bekämpfung von Littering erfordert eine Kombination dieser Maßnahmen und eine kontinuierliche Anstrengung auf individueller, gemeinschaftlicher und gesellschaftlicher Ebene. Die Sensibilisierung der Menschen für die Konsequenzen von Littering und die Förderung verantwortungsvollen Verhaltens sind Schlüsselaspekte im Kampf gegen dieses Umweltproblem.
     </p>
-    <div v-for="reason in REASONS" class="mt-8 flex lg:flex-row flex-col">
-      <img :src="reason.image" class="rounded-lg shadow-xl lg:h-[450px] lg:w-[450px] h-[250px] w-full mb-4" alt="">
+    <div v-for="measure in MEASURES" class="mt-8 flex lg:flex-row flex-col">
+      <img :src="measure.image" class="rounded-lg shadow-xl lg:h-[450px] lg:w-[450px] h-[250px] w-full mb-4" alt="">
       <div class="flex flex-col items-center justify-center px-4">
         <p class="text-xl font-semibold">
-          {{ reason.title }}
+          {{ measure.title }}
         </p>
         <p class="font-mono mt-2">
-          {{ reason.content }}
+          {{ measure.content }}
         </p>
       </div>
     </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { REASONS } from '~/components/Consequences/consequences-item'
+import { MEASURES } from "~/components/Measures/measures-item";
 
 useSeoMeta({
   title: 'Maßnahmen | Littering'
