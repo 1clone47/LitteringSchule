@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-[url('~/assets/images/background.png')] bg-cover bg-center flex flex-col">
-    <Navbar />
+    <Navbar class="mb-24" />
     <div class="flex flex-col text-white items-center mt-28 mb-24">
       <p class="text-[100px] font-bold">LITTERING</p>
       <p class="text-3xl">Die neue Bedrohung?</p>

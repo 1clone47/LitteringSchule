@@ -1,10 +1,18 @@
 <template>
   <div class="flex text-2xl p-4 space-x-8 bg-transparent text-white">
-    <div v-for="menu in MENU" class="border-b-4 border-transparent hover:border-green-500">
-      <NuxtLink :to="menu.url">
+    <NuxtLink
+        v-for="menu in MENU"
+        class="border-b-4 hover:border-green-500"
+        :class="{
+            'border-green-500' : route.path === menu.url,
+            'border-transparent' : route.path !== menu.url
+        }"
+        :to="menu.url"
+    >
+      <div>
         {{ menu.key }}
-      </NuxtLink>
-    </div>
+      </div>
+    </NuxtLink>
   </div>
 </template>
 
@@ -12,9 +20,4 @@
 import { MENU } from '~/components/Navbar/navbar-items'
 
 const route = useRoute()
-const path = ref(route.path)
-
-const show = () => {
-  console.log(route.path)
-}
 </script>
