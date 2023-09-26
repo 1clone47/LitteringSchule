@@ -6,8 +6,8 @@
       <p class="text-3xl">Die neue Bedrohung?</p>
     </div>
     <div class="text-white flex-col flex items-center mt-24">
-      <p>Scroll um mehr zu erfahren</p>
-      <ChevronDownIcon class="w-28 h-28 text-white animate-bounce p-2" />
+      <p class="mb-5">Scroll um mehr zu erfahren</p>
+      <ChevronDoubleDownIcon class="w-28 h-28 text-white animate-bounce p-2" />
     </div>
   </div>
   <div class="min-h-screen bg-[#E7EBF0] flex flex-col py-4 px-8">
@@ -29,6 +29,6 @@
 </template>
 
 <script setup>
-import { ChevronDownIcon } from "@heroicons/vue/24/solid";
+import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 import Navbar from '~/components/Navbar/home-index.vue'
 </script>
