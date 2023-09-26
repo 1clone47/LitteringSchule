@@ -1,12 +1,6 @@
 <template>
   <div class="min-h-screen bg-[url('~/assets/images/background.png')] bg-cover bg-center flex flex-col">
-    <div class="flex text-white text-2xl space-x-8 p-4 mb-32">
-      <p>Start</p>
-      <p>Quiz</p>
-      <p>Ursachen</p>
-      <p>Folgen</p>
-      <p>Massnahmen</p>
-    </div>
+    <Navbar />
     <div class="flex flex-col text-white items-center mt-28 mb-24">
       <p class="text-[100px] font-bold">LITTERING</p>
       <p class="text-3xl">Die neue Bedrohung?</p>
@@ -36,4 +30,5 @@
 
 <script setup>
 import { ChevronDownIcon } from "@heroicons/vue/24/solid";
+import Navbar from '~/components/Navbar/home-index.vue'
 </script>
