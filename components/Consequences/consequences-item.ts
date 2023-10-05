@@ -1,4 +1,4 @@
-export const REASONS = [
+export const CONSEQUENCES = [
     {
         title : 'Umweltverschmutzung',
         content : 'Littering trägt maßgeblich zur Umweltverschmutzung bei. Der weggeworfene Müll landet oft in natürlichen Ökosystemen wie Flüssen, Seen und Ozeanen. Dies führt zu einer Beeinträchtigung der Wasserqualität und kann langfristig die Gesundheit dieser Wasserlebensräume beeinträchtigen. Die enthaltenen Chemikalien können sich in der Umwelt anreichern und ökologische Störungen verursachen.',
