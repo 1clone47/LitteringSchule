@@ -71,7 +71,7 @@ import { QUESTIONS } from "~/components/Quiz/quiz-items"
 const currentQuestion = ref(1)
 const points = ref(0)
 const showAnswer = ref(false)
-const showResult = ref(true)
+const showResult = ref(false)
 
 const checkInput = (input, correctAnswer) => {
   showAnswer.value = true
