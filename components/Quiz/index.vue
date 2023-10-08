@@ -28,7 +28,7 @@
         <p class="font-mono mt-4">~ Frage {{ currentQuestion }} / 10 ~</p>
       </div>
     </div>
-    <div v-else class="w-full select-none flex flex-col items-center">
+    <div v-else class="w-full select-none flex flex-col items-center bg-[#D9D9D9] py-4 rounded-lg shadow">
       <div v-if="points >= 10" class="flex-1 flex flex-col items-center">
         <p class="text-lg font-mono">Du bist ein</p>
         <p class="text-2xl font-mono">~ Allstar ~</p>
@@ -71,7 +71,7 @@ import { QUESTIONS } from "~/components/Quiz/quiz-items"
 const currentQuestion = ref(1)
 const points = ref(0)
 const showAnswer = ref(false)
-const showResult = ref(false)
+const showResult = ref(true)
 
 const checkInput = (input, correctAnswer) => {
   showAnswer.value = true
